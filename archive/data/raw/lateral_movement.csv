@@ -1,0 +1,11 @@
+alert_text,category,source,severity,technique
+"PsExec execution detected on remote host",Lateral Movement,Sysmon,High,T1021
+"Remote desktop session initiated between hosts",Lateral Movement,Windows Event Log,Medium,T1021
+"SMB lateral movement activity observed",Lateral Movement,Security Onion,High,T1021
+"Remote service creation detected",Lateral Movement,Sysmon,High,T1021
+"Administrative share accessed remotely",Lateral Movement,Wazuh,Medium,T1021
+"RDP authentication from unusual host detected",Lateral Movement,Windows Event Log,High,T1021
+"Remote command execution observed across systems",Lateral Movement,Sysmon,Critical,T1021
+"Credential reuse detected on multiple hosts",Lateral Movement,Wazuh,High,T1078
+"Windows Management Instrumentation used remotely",Lateral Movement,Sysmon,High,T1047
+"Suspicious remote administration activity detected",Lateral Movement,Security Onion,High,T1021

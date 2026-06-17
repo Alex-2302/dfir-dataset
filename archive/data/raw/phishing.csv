@@ -1,0 +1,11 @@
+alert_text,category,source,severity,technique
+"Credential harvesting email detected",Phishing,Microsoft Defender,High,T1566
+"Malicious URL embedded in email message",Phishing,Email Gateway,High,T1566
+"User accessed known phishing domain",Phishing,Wazuh,High,T1566
+"Suspicious email attachment opened by user",Phishing,Microsoft Defender,High,T1566
+"Email containing spoofed login page detected",Phishing,Email Gateway,Medium,T1566
+"Potential business email compromise attempt observed",Phishing,Microsoft Defender,High,T1566
+"User submitted credentials to suspicious website",Phishing,Wazuh,Critical,T1566
+"Phishing campaign targeting corporate users detected",Phishing,Email Gateway,High,T1566
+"Suspicious hyperlink clicked from email",Phishing,Microsoft Defender,Medium,T1566
+"Email attachment executed malicious script",Phishing,Microsoft Defender,Critical,T1566

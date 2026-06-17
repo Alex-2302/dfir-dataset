@@ -1,0 +1,74 @@
+[
+  {
+    "alert": "Local User Enumeration Detected",
+    "response": "The command 'net user' was executed to enumerate local user accounts on the system.",
+    "severity": "Medium",
+    "category": "Reconnaissance",
+    "mitre_attack": "T1087.001",
+    "recommendation": "Review the initiating account and investigate for additional discovery activity."
+  },
+  {
+    "alert": "Local Administrators Group Enumeration Detected",
+    "response": "The command 'net localgroup Administrators' was executed to enumerate members of the local Administrators group.",
+    "severity": "Medium",
+    "category": "Reconnaissance",
+    "mitre_attack": "T1069.001",
+    "recommendation": "Investigate the source account and review follow-on privilege escalation or lateral movement activity."
+  },
+  {
+    "alert": "Software Version Discovery via Registry Query",
+    "response": "A registry query was executed to retrieve Internet Explorer version information.",
+    "severity": "Medium",
+    "category": "Reconnaissance",
+    "mitre_attack": "T1518",
+    "recommendation": "Review the initiating process and investigate additional software discovery activity."
+  },
+  {
+    "alert": "Seatbelt User Enumeration Detected",
+    "response": "Seatbelt was executed with the user enumeration module to gather information about local user accounts and system configuration.",
+    "severity": "Medium",
+    "category": "Reconnaissance",
+    "mitre_attack": "T1087",
+    "recommendation": "Investigate the source account and review additional discovery activity performed by Seatbelt."
+  },
+  {
+    "alert": "Remote Local Administrator Discovery",
+    "response": "An attempt was made to identify local administrator access on remote systems using SMB service control manager queries.",
+    "severity": "Medium",
+    "category": "Reconnaissance",
+    "mitre_attack": "T1069",
+    "recommendation": "Review the source host and investigate lateral movement preparation activity."
+  },
+  {
+    "alert": "Network Session Enumeration Detected",
+    "response": "A process attempted to enumerate active user sessions on remote systems.",
+    "severity": "Medium",
+    "category": "Reconnaissance",
+    "mitre_attack": "T1049",
+    "recommendation": "Investigate the source account and determine whether the session discovery was authorized."
+  },
+  {
+    "alert": "Domain User Enumeration Detected",
+    "response": "The command 'net user /domain' was executed to enumerate domain user accounts.",
+    "severity": "Medium",
+    "category": "Reconnaissance",
+    "mitre_attack": "T1087.002",
+    "recommendation": "Investigate the source account and review follow-on domain discovery activity."
+  },
+  {
+    "alert": "Domain Admin Enumeration (SAMR)",
+    "response": "SAMR RPC requests were used to enumerate members of the Domain Admins group.",
+    "severity": "Medium",
+    "category": "Reconnaissance",
+    "mitre_attack": "T1069.002",
+    "recommendation": "Review the initiating account and investigate privilege discovery activity."
+  },
+  {
+    "alert": "Domain Admins Group Enumeration via LDAP",
+    "response": "A Covenant Grunt process performed LDAP queries against Active Directory to enumerate the Domain Admins group and its members.",
+    "severity": "Medium",
+    "category": "Reconnaissance",
+    "mitre_attack": "T1069.002",
+    "recommendation": "Investigate the initiating host and account. Review LDAP queries, validate administrative group membership requests, and monitor for privilege escalation or lateral movement activity."
+  }
+]

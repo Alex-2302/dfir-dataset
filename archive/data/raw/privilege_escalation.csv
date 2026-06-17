@@ -1,0 +1,11 @@
+alert_text,category,source,severity,technique
+"User added to local Administrators group",Privilege Escalation,Windows Event Log,High,T1068
+"Unexpected sudo privilege granted to user account",Privilege Escalation,Wazuh,High,T1068
+"Administrative rights assigned to non-privileged user",Privilege Escalation,Wazuh,High,T1068
+"Privilege escalation attempt detected through token manipulation",Privilege Escalation,Sysmon,Critical,T1134
+"Unauthorized modification of privileged group membership",Privilege Escalation,Windows Event Log,High,T1098
+"New administrator account created unexpectedly",Privilege Escalation,Wazuh,Critical,T1136
+"Elevation of privileges detected using UAC bypass",Privilege Escalation,Sysmon,Critical,T1548
+"User account granted root-level access",Privilege Escalation,Wazuh,High,T1068
+"Abuse of sudo permissions detected",Privilege Escalation,Wazuh,High,T1548
+"Privileged access obtained by standard user account",Privilege Escalation,Windows Event Log,Critical,T1068

@@ -1,0 +1,26 @@
+# Python virtual environment
+my/
+venv/
+
+# Python cache
+__pycache__/
+*.pyc
+
+# Generated datasets
+normalized/*.csv
+final/*.csv
+
+# Generated scripts output
+scripts/*generated.csv
+
+# Large datasets
+datasets/cicids2017/MachineLearningCSV.zip
+datasets/cicids2017/MachineLearningCVE/
+
+# If Mordor is cloned from GitHub
+datasets/mordor/mordor/
+
+# OS/editor files
+.DS_Store
+.vscode/
+.idea/

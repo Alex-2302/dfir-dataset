@@ -1,0 +1,11 @@
+alert_text,category,source,severity,technique
+"Large outbound file transfer detected",Data Exfiltration,Security Onion,High,T1048
+"Sensitive data uploaded to external host",Data Exfiltration,Wazuh,Critical,T1048
+"Unusual outbound traffic volume observed",Data Exfiltration,Security Onion,High,T1048
+"Compressed archive transmitted externally",Data Exfiltration,Wazuh,High,T1567
+"Potential data theft activity detected",Data Exfiltration,Security Onion,Critical,T1048
+"Bulk transfer of files to remote server observed",Data Exfiltration,Wazuh,High,T1048
+"Outbound connection carrying large dataset identified",Data Exfiltration,Security Onion,High,T1048
+"Cloud storage upload activity exceeded threshold",Data Exfiltration,Wazuh,Medium,T1567
+"Unauthorized transmission of sensitive information detected",Data Exfiltration,Security Onion,Critical,T1048
+"External data synchronization activity observed",Data Exfiltration,Wazuh,Medium,T1567

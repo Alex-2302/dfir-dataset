@@ -1,0 +1,11 @@
+alert_text,category,source,severity,technique
+"TCP SYN scan detected against internal network",Reconnaissance,Security Onion,Medium,T1046
+"Nmap service discovery scan observed",Reconnaissance,Security Onion,Medium,T1046
+"Multiple hosts scanned within short time period",Reconnaissance,Security Onion,Medium,T1046
+"ICMP sweep activity detected across subnet",Reconnaissance,Security Onion,Low,T1018
+"Port scanning behavior identified from external IP",Reconnaissance,Security Onion,Medium,T1046
+"Network reconnaissance activity detected",Reconnaissance,Wazuh,Medium,T1046
+"Host discovery scan observed against multiple systems",Reconnaissance,Security Onion,Low,T1018
+"Sequential port probing detected",Reconnaissance,Security Onion,Medium,T1046
+"High volume of connection attempts suggests port scanning",Reconnaissance,Security Onion,Medium,T1046
+"Service enumeration activity detected",Reconnaissance,Wazuh,Low,T1046

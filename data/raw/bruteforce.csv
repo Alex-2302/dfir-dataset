@@ -1,0 +1,22 @@
+alert_text,category,source,severity,technique
+
+"Multiple failed SSH login attempts detected",Brute Force,Wazuh,High
+"Repeated authentication failures against administrator account",Brute Force,Wazuh,High
+"Password spraying activity observed across multiple user accounts",Brute Force,Wazuh,High
+"Excessive VPN login failures detected",Brute Force,Wazuh,High
+"Windows account lockout triggered after failed logins",Brute Force,Windows Event Log,Medium
+"Repeated RDP authentication failures detected",Brute Force,Windows Event Log,High
+"Credential guessing activity identified from external IP",Brute Force,Security Onion,High
+"Multiple invalid login attempts observed within short time period",Brute Force,Wazuh,Medium
+"SSH brute force attack detected against server",Brute Force,Wazuh,High
+"Authentication threshold exceeded due to failed login attempts",Brute Force,Wazuh,Medium
+"Failed SSH authentication attempts exceeded threshold",Brute Force,Wazuh,High
+"Multiple user accounts targeted by password spray attack",Brute Force,Wazuh,High
+"Administrator account experienced repeated login failures",Brute Force,Windows Event Log,High
+"High volume of failed VPN authentications observed",Brute Force,Wazuh,High
+"Remote login service targeted by credential guessing attack",Brute Force,Security Onion,High
+"Numerous failed login attempts detected from single source IP",Brute Force,Wazuh,Medium
+"Authentication failures detected across multiple hosts",Brute Force,Security Onion,High
+"Repeated login attempts against privileged account",Brute Force,Windows Event Log,High
+"Brute force behavior detected against SSH daemon",Brute Force,Wazuh,High
+"Excessive authentication failures indicate possible brute force attack",Brute Force,Wazuh,Medium

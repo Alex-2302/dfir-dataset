@@ -1,0 +1,541 @@
+id,alert_text,category,source,severity,technique
+1,User added to local Administrators group,Privilege Escalation,Windows Event Log,High,T1068
+1,User added to local Administrators group from 192.168.1.10 targeting workstation-22 user svc_backup,Privilege Escalation,Windows Event Log,High,T1068
+1,User added to local Administrators group from 192.168.1.10 targeting srv-db user john,Privilege Escalation,Windows Event Log,High,T1068
+1,User added to local Administrators group from 172.16.0.15 targeting dc01 user svc_backup,Privilege Escalation,Windows Event Log,High,T1068
+1,User added to local Administrators group from 10.0.0.5 targeting srv-db user svc_backup,Privilege Escalation,Windows Event Log,High,T1068
+1,User added to local Administrators group from 10.0.0.5 targeting dc01 user admin,Privilege Escalation,Windows Event Log,High,T1068
+2,Unexpected sudo privilege granted to user account,Privilege Escalation,Wazuh,High,T1068
+2,Unexpected sudo privilege granted to user account from 10.0.0.5 targeting srv-db user administrator,Privilege Escalation,Wazuh,High,T1068
+2,Unexpected sudo privilege granted to user account from 172.16.0.15 targeting workstation-22 user admin,Privilege Escalation,Wazuh,High,T1068
+2,Unexpected sudo privilege granted to user account from 192.168.1.10 targeting srv-db user administrator,Privilege Escalation,Wazuh,High,T1068
+2,Unexpected sudo privilege granted to user account from 10.0.0.5 targeting web01 user admin,Privilege Escalation,Wazuh,High,T1068
+2,Unexpected sudo privilege granted to user account from 10.0.0.5 targeting srv-db user svc_backup,Privilege Escalation,Wazuh,High,T1068
+3,Administrative rights assigned to non-privileged user,Privilege Escalation,Wazuh,High,T1068
+3,Administrative rights assigned to non-privileged user from 172.16.0.15 targeting srv-db user john,Privilege Escalation,Wazuh,High,T1068
+3,Administrative rights assigned to non-privileged user from 172.16.0.15 targeting srv-db user admin,Privilege Escalation,Wazuh,High,T1068
+3,Administrative rights assigned to non-privileged user from 192.168.1.10 targeting web01 user john,Privilege Escalation,Wazuh,High,T1068
+3,Administrative rights assigned to non-privileged user from 10.10.10.20 targeting workstation-22 user john,Privilege Escalation,Wazuh,High,T1068
+3,Administrative rights assigned to non-privileged user from 192.168.1.10 targeting srv-db user john,Privilege Escalation,Wazuh,High,T1068
+4,Privilege escalation attempt detected through token manipulation,Privilege Escalation,Sysmon,Critical,T1134
+4,Privilege escalation attempt detected through token manipulation from 172.16.0.15 targeting web01 user svc_backup,Privilege Escalation,Sysmon,Critical,T1134
+4,Privilege escalation attempt detected through token manipulation from 10.0.0.5 targeting web01 user admin,Privilege Escalation,Sysmon,Critical,T1134
+4,Privilege escalation attempt detected through token manipulation from 10.10.10.20 targeting workstation-22 user svc_backup,Privilege Escalation,Sysmon,Critical,T1134
+4,Privilege escalation attempt detected through token manipulation from 10.10.10.20 targeting workstation-22 user john,Privilege Escalation,Sysmon,Critical,T1134
+4,Privilege escalation attempt detected through token manipulation from 172.16.0.15 targeting srv-db user john,Privilege Escalation,Sysmon,Critical,T1134
+5,Unauthorized modification of privileged group membership,Privilege Escalation,Windows Event Log,High,T1098
+5,Unauthorized modification of privileged group membership from 10.10.10.20 targeting dc01 user administrator,Privilege Escalation,Windows Event Log,High,T1098
+5,Unauthorized modification of privileged group membership from 172.16.0.15 targeting dc01 user svc_backup,Privilege Escalation,Windows Event Log,High,T1098
+5,Unauthorized modification of privileged group membership from 192.168.1.10 targeting srv-db user admin,Privilege Escalation,Windows Event Log,High,T1098
+5,Unauthorized modification of privileged group membership from 172.16.0.15 targeting web01 user admin,Privilege Escalation,Windows Event Log,High,T1098
+5,Unauthorized modification of privileged group membership from 172.16.0.15 targeting dc01 user admin,Privilege Escalation,Windows Event Log,High,T1098
+6,New administrator account created unexpectedly,Privilege Escalation,Wazuh,Critical,T1136
+6,New administrator account created unexpectedly from 10.10.10.20 targeting dc01 user john,Privilege Escalation,Wazuh,Critical,T1136
+6,New administrator account created unexpectedly from 10.10.10.20 targeting workstation-22 user admin,Privilege Escalation,Wazuh,Critical,T1136
+6,New administrator account created unexpectedly from 172.16.0.15 targeting srv-db user admin,Privilege Escalation,Wazuh,Critical,T1136
+6,New administrator account created unexpectedly from 192.168.1.10 targeting dc01 user administrator,Privilege Escalation,Wazuh,Critical,T1136
+6,New administrator account created unexpectedly from 172.16.0.15 targeting web01 user administrator,Privilege Escalation,Wazuh,Critical,T1136
+7,Elevation of privileges detected using UAC bypass,Privilege Escalation,Sysmon,Critical,T1548
+7,Elevation of privileges detected using UAC bypass from 10.10.10.20 targeting srv-db user admin,Privilege Escalation,Sysmon,Critical,T1548
+7,Elevation of privileges detected using UAC bypass from 10.10.10.20 targeting srv-db user admin,Privilege Escalation,Sysmon,Critical,T1548
+7,Elevation of privileges detected using UAC bypass from 172.16.0.15 targeting dc01 user administrator,Privilege Escalation,Sysmon,Critical,T1548
+7,Elevation of privileges detected using UAC bypass from 172.16.0.15 targeting workstation-22 user john,Privilege Escalation,Sysmon,Critical,T1548
+7,Elevation of privileges detected using UAC bypass from 172.16.0.15 targeting srv-db user svc_backup,Privilege Escalation,Sysmon,Critical,T1548
+8,User account granted root-level access,Privilege Escalation,Wazuh,High,T1068
+8,User account granted root-level access from 10.10.10.20 targeting workstation-22 user administrator,Privilege Escalation,Wazuh,High,T1068
+8,User account granted root-level access from 172.16.0.15 targeting srv-db user administrator,Privilege Escalation,Wazuh,High,T1068
+8,User account granted root-level access from 10.10.10.20 targeting web01 user admin,Privilege Escalation,Wazuh,High,T1068
+8,User account granted root-level access from 192.168.1.10 targeting srv-db user administrator,Privilege Escalation,Wazuh,High,T1068
+8,User account granted root-level access from 172.16.0.15 targeting dc01 user john,Privilege Escalation,Wazuh,High,T1068
+9,Abuse of sudo permissions detected,Privilege Escalation,Wazuh,High,T1548
+9,Abuse of sudo permissions detected from 172.16.0.15 targeting workstation-22 user administrator,Privilege Escalation,Wazuh,High,T1548
+9,Abuse of sudo permissions detected from 10.0.0.5 targeting srv-db user administrator,Privilege Escalation,Wazuh,High,T1548
+9,Abuse of sudo permissions detected from 10.0.0.5 targeting web01 user svc_backup,Privilege Escalation,Wazuh,High,T1548
+9,Abuse of sudo permissions detected from 10.10.10.20 targeting workstation-22 user john,Privilege Escalation,Wazuh,High,T1548
+9,Abuse of sudo permissions detected from 10.0.0.5 targeting dc01 user svc_backup,Privilege Escalation,Wazuh,High,T1548
+10,Privileged access obtained by standard user account,Privilege Escalation,Windows Event Log,Critical,T1068
+10,Privileged access obtained by standard user account from 192.168.1.10 targeting workstation-22 user john,Privilege Escalation,Windows Event Log,Critical,T1068
+10,Privileged access obtained by standard user account from 10.0.0.5 targeting web01 user svc_backup,Privilege Escalation,Windows Event Log,Critical,T1068
+10,Privileged access obtained by standard user account from 172.16.0.15 targeting srv-db user admin,Privilege Escalation,Windows Event Log,Critical,T1068
+10,Privileged access obtained by standard user account from 10.0.0.5 targeting srv-db user admin,Privilege Escalation,Windows Event Log,Critical,T1068
+10,Privileged access obtained by standard user account from 192.168.1.10 targeting workstation-22 user admin,Privilege Escalation,Windows Event Log,Critical,T1068
+11,Large outbound file transfer detected,Data Exfiltration,Security Onion,High,T1048
+11,Large outbound file transfer detected from 172.16.0.15 targeting web01 user svc_backup,Data Exfiltration,Security Onion,High,T1048
+11,Large outbound file transfer detected from 10.10.10.20 targeting web01 user admin,Data Exfiltration,Security Onion,High,T1048
+11,Large outbound file transfer detected from 10.10.10.20 targeting web01 user john,Data Exfiltration,Security Onion,High,T1048
+11,Large outbound file transfer detected from 172.16.0.15 targeting workstation-22 user administrator,Data Exfiltration,Security Onion,High,T1048
+11,Large outbound file transfer detected from 192.168.1.10 targeting srv-db user administrator,Data Exfiltration,Security Onion,High,T1048
+12,Sensitive data uploaded to external host,Data Exfiltration,Wazuh,Critical,T1048
+12,Sensitive data uploaded to external host from 10.10.10.20 targeting dc01 user admin,Data Exfiltration,Wazuh,Critical,T1048
+12,Sensitive data uploaded to external host from 172.16.0.15 targeting workstation-22 user john,Data Exfiltration,Wazuh,Critical,T1048
+12,Sensitive data uploaded to external host from 192.168.1.10 targeting dc01 user john,Data Exfiltration,Wazuh,Critical,T1048
+12,Sensitive data uploaded to external host from 192.168.1.10 targeting web01 user admin,Data Exfiltration,Wazuh,Critical,T1048
+12,Sensitive data uploaded to external host from 10.10.10.20 targeting srv-db user administrator,Data Exfiltration,Wazuh,Critical,T1048
+13,Unusual outbound traffic volume observed,Data Exfiltration,Security Onion,High,T1048
+13,Unusual outbound traffic volume observed from 10.0.0.5 targeting dc01 user administrator,Data Exfiltration,Security Onion,High,T1048
+13,Unusual outbound traffic volume observed from 10.0.0.5 targeting web01 user admin,Data Exfiltration,Security Onion,High,T1048
+13,Unusual outbound traffic volume observed from 192.168.1.10 targeting srv-db user administrator,Data Exfiltration,Security Onion,High,T1048
+13,Unusual outbound traffic volume observed from 172.16.0.15 targeting srv-db user administrator,Data Exfiltration,Security Onion,High,T1048
+13,Unusual outbound traffic volume observed from 192.168.1.10 targeting srv-db user john,Data Exfiltration,Security Onion,High,T1048
+14,Compressed archive transmitted externally,Data Exfiltration,Wazuh,High,T1567
+14,Compressed archive transmitted externally from 10.0.0.5 targeting web01 user john,Data Exfiltration,Wazuh,High,T1567
+14,Compressed archive transmitted externally from 10.10.10.20 targeting workstation-22 user administrator,Data Exfiltration,Wazuh,High,T1567
+14,Compressed archive transmitted externally from 10.10.10.20 targeting workstation-22 user admin,Data Exfiltration,Wazuh,High,T1567
+14,Compressed archive transmitted externally from 172.16.0.15 targeting srv-db user admin,Data Exfiltration,Wazuh,High,T1567
+14,Compressed archive transmitted externally from 10.0.0.5 targeting srv-db user john,Data Exfiltration,Wazuh,High,T1567
+15,Potential data theft activity detected,Data Exfiltration,Security Onion,Critical,T1048
+15,Potential data theft activity detected from 172.16.0.15 targeting srv-db user svc_backup,Data Exfiltration,Security Onion,Critical,T1048
+15,Potential data theft activity detected from 172.16.0.15 targeting dc01 user admin,Data Exfiltration,Security Onion,Critical,T1048
+15,Potential data theft activity detected from 172.16.0.15 targeting web01 user john,Data Exfiltration,Security Onion,Critical,T1048
+15,Potential data theft activity detected from 172.16.0.15 targeting web01 user svc_backup,Data Exfiltration,Security Onion,Critical,T1048
+15,Potential data theft activity detected from 10.0.0.5 targeting web01 user admin,Data Exfiltration,Security Onion,Critical,T1048
+16,Bulk transfer of files to remote server observed,Data Exfiltration,Wazuh,High,T1048
+16,Bulk transfer of files to remote server observed from 172.16.0.15 targeting workstation-22 user administrator,Data Exfiltration,Wazuh,High,T1048
+16,Bulk transfer of files to remote server observed from 192.168.1.10 targeting srv-db user admin,Data Exfiltration,Wazuh,High,T1048
+16,Bulk transfer of files to remote server observed from 10.0.0.5 targeting dc01 user john,Data Exfiltration,Wazuh,High,T1048
+16,Bulk transfer of files to remote server observed from 172.16.0.15 targeting dc01 user administrator,Data Exfiltration,Wazuh,High,T1048
+16,Bulk transfer of files to remote server observed from 10.0.0.5 targeting workstation-22 user john,Data Exfiltration,Wazuh,High,T1048
+17,Outbound connection carrying large dataset identified,Data Exfiltration,Security Onion,High,T1048
+17,Outbound connection carrying large dataset identified from 192.168.1.10 targeting workstation-22 user john,Data Exfiltration,Security Onion,High,T1048
+17,Outbound connection carrying large dataset identified from 10.10.10.20 targeting dc01 user admin,Data Exfiltration,Security Onion,High,T1048
+17,Outbound connection carrying large dataset identified from 10.10.10.20 targeting web01 user john,Data Exfiltration,Security Onion,High,T1048
+17,Outbound connection carrying large dataset identified from 192.168.1.10 targeting dc01 user john,Data Exfiltration,Security Onion,High,T1048
+17,Outbound connection carrying large dataset identified from 172.16.0.15 targeting web01 user administrator,Data Exfiltration,Security Onion,High,T1048
+18,Cloud storage upload activity exceeded threshold,Data Exfiltration,Wazuh,Medium,T1567
+18,Cloud storage upload activity exceeded threshold from 172.16.0.15 targeting dc01 user svc_backup,Data Exfiltration,Wazuh,Medium,T1567
+18,Cloud storage upload activity exceeded threshold from 10.10.10.20 targeting srv-db user administrator,Data Exfiltration,Wazuh,Medium,T1567
+18,Cloud storage upload activity exceeded threshold from 10.0.0.5 targeting dc01 user administrator,Data Exfiltration,Wazuh,Medium,T1567
+18,Cloud storage upload activity exceeded threshold from 10.10.10.20 targeting srv-db user svc_backup,Data Exfiltration,Wazuh,Medium,T1567
+18,Cloud storage upload activity exceeded threshold from 172.16.0.15 targeting dc01 user admin,Data Exfiltration,Wazuh,Medium,T1567
+19,Unauthorized transmission of sensitive information detected,Data Exfiltration,Security Onion,Critical,T1048
+19,Unauthorized transmission of sensitive information detected from 10.10.10.20 targeting workstation-22 user john,Data Exfiltration,Security Onion,Critical,T1048
+19,Unauthorized transmission of sensitive information detected from 10.10.10.20 targeting srv-db user john,Data Exfiltration,Security Onion,Critical,T1048
+19,Unauthorized transmission of sensitive information detected from 172.16.0.15 targeting workstation-22 user administrator,Data Exfiltration,Security Onion,Critical,T1048
+19,Unauthorized transmission of sensitive information detected from 10.10.10.20 targeting dc01 user admin,Data Exfiltration,Security Onion,Critical,T1048
+19,Unauthorized transmission of sensitive information detected from 172.16.0.15 targeting dc01 user john,Data Exfiltration,Security Onion,Critical,T1048
+20,External data synchronization activity observed,Data Exfiltration,Wazuh,Medium,T1567
+20,External data synchronization activity observed from 10.0.0.5 targeting web01 user admin,Data Exfiltration,Wazuh,Medium,T1567
+20,External data synchronization activity observed from 10.10.10.20 targeting srv-db user john,Data Exfiltration,Wazuh,Medium,T1567
+20,External data synchronization activity observed from 10.10.10.20 targeting srv-db user admin,Data Exfiltration,Wazuh,Medium,T1567
+20,External data synchronization activity observed from 192.168.1.10 targeting web01 user svc_backup,Data Exfiltration,Wazuh,Medium,T1567
+20,External data synchronization activity observed from 172.16.0.15 targeting dc01 user john,Data Exfiltration,Wazuh,Medium,T1567
+21,Scheduled task created for persistence,Persistence,Wazuh,High,T1053
+21,Scheduled task created for persistence from 172.16.0.15 targeting srv-db user svc_backup,Persistence,Wazuh,High,T1053
+21,Scheduled task created for persistence from 10.10.10.20 targeting web01 user svc_backup,Persistence,Wazuh,High,T1053
+21,Scheduled task created for persistence from 192.168.1.10 targeting workstation-22 user admin,Persistence,Wazuh,High,T1053
+21,Scheduled task created for persistence from 10.0.0.5 targeting srv-db user john,Persistence,Wazuh,High,T1053
+21,Scheduled task created for persistence from 172.16.0.15 targeting workstation-22 user svc_backup,Persistence,Wazuh,High,T1053
+22,Registry startup key modified,Persistence,Sysmon,High,T1547
+22,Registry startup key modified from 172.16.0.15 targeting workstation-22 user administrator,Persistence,Sysmon,High,T1547
+22,Registry startup key modified from 10.0.0.5 targeting workstation-22 user svc_backup,Persistence,Sysmon,High,T1547
+22,Registry startup key modified from 10.10.10.20 targeting dc01 user admin,Persistence,Sysmon,High,T1547
+22,Registry startup key modified from 172.16.0.15 targeting srv-db user john,Persistence,Sysmon,High,T1547
+22,Registry startup key modified from 10.0.0.5 targeting dc01 user john,Persistence,Sysmon,High,T1547
+23,New startup service installed,Persistence,Wazuh,High,T1543
+23,New startup service installed from 10.0.0.5 targeting srv-db user administrator,Persistence,Wazuh,High,T1543
+23,New startup service installed from 192.168.1.10 targeting web01 user svc_backup,Persistence,Wazuh,High,T1543
+23,New startup service installed from 10.10.10.20 targeting workstation-22 user john,Persistence,Wazuh,High,T1543
+23,New startup service installed from 172.16.0.15 targeting dc01 user admin,Persistence,Wazuh,High,T1543
+23,New startup service installed from 10.10.10.20 targeting srv-db user admin,Persistence,Wazuh,High,T1543
+24,Cron job created for recurring execution,Persistence,Linux Audit,Medium,T1053
+24,Cron job created for recurring execution from 192.168.1.10 targeting web01 user svc_backup,Persistence,Linux Audit,Medium,T1053
+24,Cron job created for recurring execution from 172.16.0.15 targeting srv-db user admin,Persistence,Linux Audit,Medium,T1053
+24,Cron job created for recurring execution from 10.0.0.5 targeting workstation-22 user svc_backup,Persistence,Linux Audit,Medium,T1053
+24,Cron job created for recurring execution from 172.16.0.15 targeting dc01 user john,Persistence,Linux Audit,Medium,T1053
+24,Cron job created for recurring execution from 172.16.0.15 targeting dc01 user administrator,Persistence,Linux Audit,Medium,T1053
+25,Persistence mechanism established through scheduled task,Persistence,Wazuh,High,T1053
+25,Persistence mechanism established through scheduled task from 10.0.0.5 targeting srv-db user svc_backup,Persistence,Wazuh,High,T1053
+25,Persistence mechanism established through scheduled task from 10.10.10.20 targeting dc01 user administrator,Persistence,Wazuh,High,T1053
+25,Persistence mechanism established through scheduled task from 172.16.0.15 targeting srv-db user admin,Persistence,Wazuh,High,T1053
+25,Persistence mechanism established through scheduled task from 10.10.10.20 targeting dc01 user admin,Persistence,Wazuh,High,T1053
+25,Persistence mechanism established through scheduled task from 10.0.0.5 targeting workstation-22 user svc_backup,Persistence,Wazuh,High,T1053
+26,Windows Run registry key modified,Persistence,Sysmon,High,T1547
+26,Windows Run registry key modified from 10.10.10.20 targeting dc01 user administrator,Persistence,Sysmon,High,T1547
+26,Windows Run registry key modified from 192.168.1.10 targeting workstation-22 user john,Persistence,Sysmon,High,T1547
+26,Windows Run registry key modified from 192.168.1.10 targeting dc01 user administrator,Persistence,Sysmon,High,T1547
+26,Windows Run registry key modified from 10.0.0.5 targeting web01 user john,Persistence,Sysmon,High,T1547
+26,Windows Run registry key modified from 10.0.0.5 targeting srv-db user admin,Persistence,Sysmon,High,T1547
+27,Unauthorized service installation detected,Persistence,Wazuh,High,T1543
+27,Unauthorized service installation detected from 10.10.10.20 targeting srv-db user svc_backup,Persistence,Wazuh,High,T1543
+27,Unauthorized service installation detected from 192.168.1.10 targeting srv-db user admin,Persistence,Wazuh,High,T1543
+27,Unauthorized service installation detected from 10.0.0.5 targeting srv-db user administrator,Persistence,Wazuh,High,T1543
+27,Unauthorized service installation detected from 10.10.10.20 targeting workstation-22 user admin,Persistence,Wazuh,High,T1543
+27,Unauthorized service installation detected from 10.0.0.5 targeting dc01 user administrator,Persistence,Wazuh,High,T1543
+28,Startup folder modified with executable,Persistence,Sysmon,Medium,T1547
+28,Startup folder modified with executable from 10.0.0.5 targeting workstation-22 user admin,Persistence,Sysmon,Medium,T1547
+28,Startup folder modified with executable from 10.0.0.5 targeting dc01 user admin,Persistence,Sysmon,Medium,T1547
+28,Startup folder modified with executable from 192.168.1.10 targeting workstation-22 user admin,Persistence,Sysmon,Medium,T1547
+28,Startup folder modified with executable from 10.10.10.20 targeting srv-db user admin,Persistence,Sysmon,Medium,T1547
+28,Startup folder modified with executable from 192.168.1.10 targeting srv-db user john,Persistence,Sysmon,Medium,T1547
+29,Backdoor configured for automatic execution,Persistence,Wazuh,Critical,T1547
+29,Backdoor configured for automatic execution from 10.10.10.20 targeting web01 user svc_backup,Persistence,Wazuh,Critical,T1547
+29,Backdoor configured for automatic execution from 10.0.0.5 targeting srv-db user administrator,Persistence,Wazuh,Critical,T1547
+29,Backdoor configured for automatic execution from 172.16.0.15 targeting srv-db user john,Persistence,Wazuh,Critical,T1547
+29,Backdoor configured for automatic execution from 10.0.0.5 targeting workstation-22 user john,Persistence,Wazuh,Critical,T1547
+29,Backdoor configured for automatic execution from 10.0.0.5 targeting workstation-22 user admin,Persistence,Wazuh,Critical,T1547
+30,Persistence achieved through registry modification,Persistence,Sysmon,High,T1547
+30,Persistence achieved through registry modification from 172.16.0.15 targeting web01 user admin,Persistence,Sysmon,High,T1547
+30,Persistence achieved through registry modification from 172.16.0.15 targeting workstation-22 user svc_backup,Persistence,Sysmon,High,T1547
+30,Persistence achieved through registry modification from 192.168.1.10 targeting web01 user administrator,Persistence,Sysmon,High,T1547
+30,Persistence achieved through registry modification from 172.16.0.15 targeting workstation-22 user admin,Persistence,Sysmon,High,T1547
+30,Persistence achieved through registry modification from 10.10.10.20 targeting dc01 user admin,Persistence,Sysmon,High,T1547
+31,PsExec execution detected on remote host,Lateral Movement,Sysmon,High,T1021
+31,PsExec execution detected on remote host from 10.10.10.20 targeting dc01 user administrator,Lateral Movement,Sysmon,High,T1021
+31,PsExec execution detected on remote host from 10.0.0.5 targeting srv-db user admin,Lateral Movement,Sysmon,High,T1021
+31,PsExec execution detected on remote host from 10.0.0.5 targeting dc01 user admin,Lateral Movement,Sysmon,High,T1021
+31,PsExec execution detected on remote host from 192.168.1.10 targeting workstation-22 user john,Lateral Movement,Sysmon,High,T1021
+31,PsExec execution detected on remote host from 192.168.1.10 targeting workstation-22 user admin,Lateral Movement,Sysmon,High,T1021
+32,Remote desktop session initiated between hosts,Lateral Movement,Windows Event Log,Medium,T1021
+32,Remote desktop session initiated between hosts from 172.16.0.15 targeting dc01 user administrator,Lateral Movement,Windows Event Log,Medium,T1021
+32,Remote desktop session initiated between hosts from 192.168.1.10 targeting web01 user administrator,Lateral Movement,Windows Event Log,Medium,T1021
+32,Remote desktop session initiated between hosts from 10.0.0.5 targeting srv-db user svc_backup,Lateral Movement,Windows Event Log,Medium,T1021
+32,Remote desktop session initiated between hosts from 10.0.0.5 targeting web01 user administrator,Lateral Movement,Windows Event Log,Medium,T1021
+32,Remote desktop session initiated between hosts from 192.168.1.10 targeting dc01 user admin,Lateral Movement,Windows Event Log,Medium,T1021
+33,SMB lateral movement activity observed,Lateral Movement,Security Onion,High,T1021
+33,SMB lateral movement activity observed from 10.0.0.5 targeting web01 user svc_backup,Lateral Movement,Security Onion,High,T1021
+33,SMB lateral movement activity observed from 10.10.10.20 targeting workstation-22 user admin,Lateral Movement,Security Onion,High,T1021
+33,SMB lateral movement activity observed from 10.0.0.5 targeting workstation-22 user svc_backup,Lateral Movement,Security Onion,High,T1021
+33,SMB lateral movement activity observed from 10.0.0.5 targeting dc01 user admin,Lateral Movement,Security Onion,High,T1021
+33,SMB lateral movement activity observed from 10.10.10.20 targeting workstation-22 user john,Lateral Movement,Security Onion,High,T1021
+34,Remote service creation detected,Lateral Movement,Sysmon,High,T1021
+34,Remote service creation detected from 192.168.1.10 targeting srv-db user john,Lateral Movement,Sysmon,High,T1021
+34,Remote service creation detected from 172.16.0.15 targeting dc01 user john,Lateral Movement,Sysmon,High,T1021
+34,Remote service creation detected from 192.168.1.10 targeting web01 user admin,Lateral Movement,Sysmon,High,T1021
+34,Remote service creation detected from 192.168.1.10 targeting workstation-22 user administrator,Lateral Movement,Sysmon,High,T1021
+34,Remote service creation detected from 10.10.10.20 targeting web01 user svc_backup,Lateral Movement,Sysmon,High,T1021
+35,Administrative share accessed remotely,Lateral Movement,Wazuh,Medium,T1021
+35,Administrative share accessed remotely from 10.10.10.20 targeting web01 user john,Lateral Movement,Wazuh,Medium,T1021
+35,Administrative share accessed remotely from 10.0.0.5 targeting srv-db user svc_backup,Lateral Movement,Wazuh,Medium,T1021
+35,Administrative share accessed remotely from 192.168.1.10 targeting srv-db user admin,Lateral Movement,Wazuh,Medium,T1021
+35,Administrative share accessed remotely from 192.168.1.10 targeting workstation-22 user john,Lateral Movement,Wazuh,Medium,T1021
+35,Administrative share accessed remotely from 172.16.0.15 targeting dc01 user admin,Lateral Movement,Wazuh,Medium,T1021
+36,RDP authentication from unusual host detected,Lateral Movement,Windows Event Log,High,T1021
+36,RDP authentication from unusual host detected from 192.168.1.10 targeting workstation-22 user svc_backup,Lateral Movement,Windows Event Log,High,T1021
+36,RDP authentication from unusual host detected from 192.168.1.10 targeting dc01 user svc_backup,Lateral Movement,Windows Event Log,High,T1021
+36,RDP authentication from unusual host detected from 172.16.0.15 targeting dc01 user john,Lateral Movement,Windows Event Log,High,T1021
+36,RDP authentication from unusual host detected from 172.16.0.15 targeting workstation-22 user john,Lateral Movement,Windows Event Log,High,T1021
+36,RDP authentication from unusual host detected from 172.16.0.15 targeting srv-db user admin,Lateral Movement,Windows Event Log,High,T1021
+37,Remote command execution observed across systems,Lateral Movement,Sysmon,Critical,T1021
+37,Remote command execution observed across systems from 172.16.0.15 targeting dc01 user john,Lateral Movement,Sysmon,Critical,T1021
+37,Remote command execution observed across systems from 10.10.10.20 targeting dc01 user john,Lateral Movement,Sysmon,Critical,T1021
+37,Remote command execution observed across systems from 10.10.10.20 targeting web01 user admin,Lateral Movement,Sysmon,Critical,T1021
+37,Remote command execution observed across systems from 10.0.0.5 targeting workstation-22 user administrator,Lateral Movement,Sysmon,Critical,T1021
+37,Remote command execution observed across systems from 172.16.0.15 targeting srv-db user admin,Lateral Movement,Sysmon,Critical,T1021
+38,Credential reuse detected on multiple hosts,Lateral Movement,Wazuh,High,T1078
+38,Credential reuse detected on multiple hosts from 192.168.1.10 targeting web01 user svc_backup,Lateral Movement,Wazuh,High,T1078
+38,Credential reuse detected on multiple hosts from 10.10.10.20 targeting srv-db user svc_backup,Lateral Movement,Wazuh,High,T1078
+38,Credential reuse detected on multiple hosts from 10.0.0.5 targeting web01 user john,Lateral Movement,Wazuh,High,T1078
+38,Credential reuse detected on multiple hosts from 10.0.0.5 targeting workstation-22 user admin,Lateral Movement,Wazuh,High,T1078
+38,Credential reuse detected on multiple hosts from 10.10.10.20 targeting web01 user admin,Lateral Movement,Wazuh,High,T1078
+39,Windows Management Instrumentation used remotely,Lateral Movement,Sysmon,High,T1047
+39,Windows Management Instrumentation used remotely from 192.168.1.10 targeting srv-db user admin,Lateral Movement,Sysmon,High,T1047
+39,Windows Management Instrumentation used remotely from 192.168.1.10 targeting dc01 user john,Lateral Movement,Sysmon,High,T1047
+39,Windows Management Instrumentation used remotely from 10.0.0.5 targeting dc01 user svc_backup,Lateral Movement,Sysmon,High,T1047
+39,Windows Management Instrumentation used remotely from 10.0.0.5 targeting srv-db user admin,Lateral Movement,Sysmon,High,T1047
+39,Windows Management Instrumentation used remotely from 10.0.0.5 targeting workstation-22 user admin,Lateral Movement,Sysmon,High,T1047
+40,Suspicious remote administration activity detected,Lateral Movement,Security Onion,High,T1021
+40,Suspicious remote administration activity detected from 172.16.0.15 targeting web01 user john,Lateral Movement,Security Onion,High,T1021
+40,Suspicious remote administration activity detected from 192.168.1.10 targeting web01 user john,Lateral Movement,Security Onion,High,T1021
+40,Suspicious remote administration activity detected from 10.0.0.5 targeting workstation-22 user administrator,Lateral Movement,Security Onion,High,T1021
+40,Suspicious remote administration activity detected from 10.0.0.5 targeting dc01 user john,Lateral Movement,Security Onion,High,T1021
+40,Suspicious remote administration activity detected from 10.10.10.20 targeting web01 user svc_backup,Lateral Movement,Security Onion,High,T1021
+41,Multiple failed SSH login attempts detected,Brute Force,Wazuh,High,
+41,Multiple failed SSH login attempts detected from 10.10.10.20 targeting web01 user svc_backup,Brute Force,Wazuh,High,
+41,Multiple failed SSH login attempts detected from 10.10.10.20 targeting dc01 user john,Brute Force,Wazuh,High,
+41,Multiple failed SSH login attempts detected from 10.0.0.5 targeting workstation-22 user svc_backup,Brute Force,Wazuh,High,
+41,Multiple failed SSH login attempts detected from 172.16.0.15 targeting srv-db user svc_backup,Brute Force,Wazuh,High,
+41,Multiple failed SSH login attempts detected from 10.0.0.5 targeting srv-db user admin,Brute Force,Wazuh,High,
+42,Repeated authentication failures against administrator account,Brute Force,Wazuh,High,
+42,Repeated authentication failures against administrator account from 10.10.10.20 targeting workstation-22 user administrator,Brute Force,Wazuh,High,
+42,Repeated authentication failures against administrator account from 10.0.0.5 targeting workstation-22 user svc_backup,Brute Force,Wazuh,High,
+42,Repeated authentication failures against administrator account from 172.16.0.15 targeting dc01 user admin,Brute Force,Wazuh,High,
+42,Repeated authentication failures against administrator account from 10.0.0.5 targeting web01 user svc_backup,Brute Force,Wazuh,High,
+42,Repeated authentication failures against administrator account from 172.16.0.15 targeting srv-db user admin,Brute Force,Wazuh,High,
+43,Password spraying activity observed across multiple user accounts,Brute Force,Wazuh,High,
+43,Password spraying activity observed across multiple user accounts from 10.0.0.5 targeting web01 user svc_backup,Brute Force,Wazuh,High,
+43,Password spraying activity observed across multiple user accounts from 10.0.0.5 targeting web01 user admin,Brute Force,Wazuh,High,
+43,Password spraying activity observed across multiple user accounts from 192.168.1.10 targeting web01 user administrator,Brute Force,Wazuh,High,
+43,Password spraying activity observed across multiple user accounts from 172.16.0.15 targeting web01 user svc_backup,Brute Force,Wazuh,High,
+43,Password spraying activity observed across multiple user accounts from 10.10.10.20 targeting srv-db user administrator,Brute Force,Wazuh,High,
+44,Excessive VPN login failures detected,Brute Force,Wazuh,High,
+44,Excessive VPN login failures detected from 10.10.10.20 targeting srv-db user john,Brute Force,Wazuh,High,
+44,Excessive VPN login failures detected from 10.0.0.5 targeting workstation-22 user admin,Brute Force,Wazuh,High,
+44,Excessive VPN login failures detected from 172.16.0.15 targeting srv-db user administrator,Brute Force,Wazuh,High,
+44,Excessive VPN login failures detected from 10.0.0.5 targeting web01 user admin,Brute Force,Wazuh,High,
+44,Excessive VPN login failures detected from 10.0.0.5 targeting web01 user admin,Brute Force,Wazuh,High,
+45,Windows account lockout triggered after failed logins,Brute Force,Windows Event Log,Medium,
+45,Windows account lockout triggered after failed logins from 172.16.0.15 targeting srv-db user john,Brute Force,Windows Event Log,Medium,
+45,Windows account lockout triggered after failed logins from 172.16.0.15 targeting web01 user svc_backup,Brute Force,Windows Event Log,Medium,
+45,Windows account lockout triggered after failed logins from 192.168.1.10 targeting srv-db user admin,Brute Force,Windows Event Log,Medium,
+45,Windows account lockout triggered after failed logins from 10.10.10.20 targeting web01 user john,Brute Force,Windows Event Log,Medium,
+45,Windows account lockout triggered after failed logins from 10.0.0.5 targeting dc01 user administrator,Brute Force,Windows Event Log,Medium,
+46,Repeated RDP authentication failures detected,Brute Force,Windows Event Log,High,
+46,Repeated RDP authentication failures detected from 10.0.0.5 targeting web01 user john,Brute Force,Windows Event Log,High,
+46,Repeated RDP authentication failures detected from 172.16.0.15 targeting web01 user admin,Brute Force,Windows Event Log,High,
+46,Repeated RDP authentication failures detected from 10.10.10.20 targeting dc01 user svc_backup,Brute Force,Windows Event Log,High,
+46,Repeated RDP authentication failures detected from 192.168.1.10 targeting workstation-22 user svc_backup,Brute Force,Windows Event Log,High,
+46,Repeated RDP authentication failures detected from 10.10.10.20 targeting srv-db user admin,Brute Force,Windows Event Log,High,
+47,Credential guessing activity identified from external IP,Brute Force,Security Onion,High,
+47,Credential guessing activity identified from external IP from 10.10.10.20 targeting web01 user admin,Brute Force,Security Onion,High,
+47,Credential guessing activity identified from external IP from 172.16.0.15 targeting workstation-22 user administrator,Brute Force,Security Onion,High,
+47,Credential guessing activity identified from external IP from 192.168.1.10 targeting srv-db user john,Brute Force,Security Onion,High,
+47,Credential guessing activity identified from external IP from 10.0.0.5 targeting web01 user admin,Brute Force,Security Onion,High,
+47,Credential guessing activity identified from external IP from 172.16.0.15 targeting srv-db user john,Brute Force,Security Onion,High,
+48,Multiple invalid login attempts observed within short time period,Brute Force,Wazuh,Medium,
+48,Multiple invalid login attempts observed within short time period from 10.10.10.20 targeting dc01 user svc_backup,Brute Force,Wazuh,Medium,
+48,Multiple invalid login attempts observed within short time period from 192.168.1.10 targeting web01 user svc_backup,Brute Force,Wazuh,Medium,
+48,Multiple invalid login attempts observed within short time period from 172.16.0.15 targeting dc01 user administrator,Brute Force,Wazuh,Medium,
+48,Multiple invalid login attempts observed within short time period from 10.0.0.5 targeting srv-db user john,Brute Force,Wazuh,Medium,
+48,Multiple invalid login attempts observed within short time period from 10.10.10.20 targeting workstation-22 user john,Brute Force,Wazuh,Medium,
+49,SSH brute force attack detected against server,Brute Force,Wazuh,High,
+49,SSH brute force attack detected against server from 10.0.0.5 targeting workstation-22 user john,Brute Force,Wazuh,High,
+49,SSH brute force attack detected against server from 10.0.0.5 targeting dc01 user svc_backup,Brute Force,Wazuh,High,
+49,SSH brute force attack detected against server from 10.10.10.20 targeting dc01 user administrator,Brute Force,Wazuh,High,
+49,SSH brute force attack detected against server from 10.10.10.20 targeting workstation-22 user john,Brute Force,Wazuh,High,
+49,SSH brute force attack detected against server from 10.10.10.20 targeting workstation-22 user administrator,Brute Force,Wazuh,High,
+50,Authentication threshold exceeded due to failed login attempts,Brute Force,Wazuh,Medium,
+50,Authentication threshold exceeded due to failed login attempts from 172.16.0.15 targeting web01 user administrator,Brute Force,Wazuh,Medium,
+50,Authentication threshold exceeded due to failed login attempts from 10.0.0.5 targeting dc01 user svc_backup,Brute Force,Wazuh,Medium,
+50,Authentication threshold exceeded due to failed login attempts from 172.16.0.15 targeting web01 user john,Brute Force,Wazuh,Medium,
+50,Authentication threshold exceeded due to failed login attempts from 172.16.0.15 targeting dc01 user svc_backup,Brute Force,Wazuh,Medium,
+50,Authentication threshold exceeded due to failed login attempts from 192.168.1.10 targeting srv-db user admin,Brute Force,Wazuh,Medium,
+51,Failed SSH authentication attempts exceeded threshold,Brute Force,Wazuh,High,
+51,Failed SSH authentication attempts exceeded threshold from 192.168.1.10 targeting workstation-22 user svc_backup,Brute Force,Wazuh,High,
+51,Failed SSH authentication attempts exceeded threshold from 172.16.0.15 targeting web01 user administrator,Brute Force,Wazuh,High,
+51,Failed SSH authentication attempts exceeded threshold from 10.0.0.5 targeting web01 user john,Brute Force,Wazuh,High,
+51,Failed SSH authentication attempts exceeded threshold from 172.16.0.15 targeting srv-db user administrator,Brute Force,Wazuh,High,
+51,Failed SSH authentication attempts exceeded threshold from 10.0.0.5 targeting web01 user svc_backup,Brute Force,Wazuh,High,
+52,Multiple user accounts targeted by password spray attack,Brute Force,Wazuh,High,
+52,Multiple user accounts targeted by password spray attack from 192.168.1.10 targeting workstation-22 user admin,Brute Force,Wazuh,High,
+52,Multiple user accounts targeted by password spray attack from 192.168.1.10 targeting dc01 user administrator,Brute Force,Wazuh,High,
+52,Multiple user accounts targeted by password spray attack from 192.168.1.10 targeting dc01 user john,Brute Force,Wazuh,High,
+52,Multiple user accounts targeted by password spray attack from 10.0.0.5 targeting dc01 user john,Brute Force,Wazuh,High,
+52,Multiple user accounts targeted by password spray attack from 10.0.0.5 targeting dc01 user administrator,Brute Force,Wazuh,High,
+53,Administrator account experienced repeated login failures,Brute Force,Windows Event Log,High,
+53,Administrator account experienced repeated login failures from 10.10.10.20 targeting workstation-22 user john,Brute Force,Windows Event Log,High,
+53,Administrator account experienced repeated login failures from 10.0.0.5 targeting dc01 user admin,Brute Force,Windows Event Log,High,
+53,Administrator account experienced repeated login failures from 10.10.10.20 targeting dc01 user john,Brute Force,Windows Event Log,High,
+53,Administrator account experienced repeated login failures from 172.16.0.15 targeting web01 user john,Brute Force,Windows Event Log,High,
+53,Administrator account experienced repeated login failures from 172.16.0.15 targeting dc01 user admin,Brute Force,Windows Event Log,High,
+54,High volume of failed VPN authentications observed,Brute Force,Wazuh,High,
+54,High volume of failed VPN authentications observed from 192.168.1.10 targeting web01 user john,Brute Force,Wazuh,High,
+54,High volume of failed VPN authentications observed from 172.16.0.15 targeting web01 user administrator,Brute Force,Wazuh,High,
+54,High volume of failed VPN authentications observed from 172.16.0.15 targeting srv-db user admin,Brute Force,Wazuh,High,
+54,High volume of failed VPN authentications observed from 172.16.0.15 targeting web01 user john,Brute Force,Wazuh,High,
+54,High volume of failed VPN authentications observed from 192.168.1.10 targeting workstation-22 user svc_backup,Brute Force,Wazuh,High,
+55,Remote login service targeted by credential guessing attack,Brute Force,Security Onion,High,
+55,Remote login service targeted by credential guessing attack from 10.0.0.5 targeting dc01 user svc_backup,Brute Force,Security Onion,High,
+55,Remote login service targeted by credential guessing attack from 172.16.0.15 targeting dc01 user john,Brute Force,Security Onion,High,
+55,Remote login service targeted by credential guessing attack from 192.168.1.10 targeting dc01 user administrator,Brute Force,Security Onion,High,
+55,Remote login service targeted by credential guessing attack from 192.168.1.10 targeting srv-db user john,Brute Force,Security Onion,High,
+55,Remote login service targeted by credential guessing attack from 192.168.1.10 targeting dc01 user john,Brute Force,Security Onion,High,
+56,Numerous failed login attempts detected from single source IP,Brute Force,Wazuh,Medium,
+56,Numerous failed login attempts detected from single source IP from 172.16.0.15 targeting workstation-22 user administrator,Brute Force,Wazuh,Medium,
+56,Numerous failed login attempts detected from single source IP from 10.10.10.20 targeting web01 user administrator,Brute Force,Wazuh,Medium,
+56,Numerous failed login attempts detected from single source IP from 10.10.10.20 targeting srv-db user svc_backup,Brute Force,Wazuh,Medium,
+56,Numerous failed login attempts detected from single source IP from 172.16.0.15 targeting dc01 user svc_backup,Brute Force,Wazuh,Medium,
+56,Numerous failed login attempts detected from single source IP from 172.16.0.15 targeting web01 user john,Brute Force,Wazuh,Medium,
+57,Authentication failures detected across multiple hosts,Brute Force,Security Onion,High,
+57,Authentication failures detected across multiple hosts from 10.0.0.5 targeting web01 user admin,Brute Force,Security Onion,High,
+57,Authentication failures detected across multiple hosts from 10.10.10.20 targeting web01 user john,Brute Force,Security Onion,High,
+57,Authentication failures detected across multiple hosts from 172.16.0.15 targeting dc01 user john,Brute Force,Security Onion,High,
+57,Authentication failures detected across multiple hosts from 192.168.1.10 targeting dc01 user administrator,Brute Force,Security Onion,High,
+57,Authentication failures detected across multiple hosts from 172.16.0.15 targeting dc01 user admin,Brute Force,Security Onion,High,
+58,Repeated login attempts against privileged account,Brute Force,Windows Event Log,High,
+58,Repeated login attempts against privileged account from 172.16.0.15 targeting srv-db user admin,Brute Force,Windows Event Log,High,
+58,Repeated login attempts against privileged account from 192.168.1.10 targeting dc01 user admin,Brute Force,Windows Event Log,High,
+58,Repeated login attempts against privileged account from 172.16.0.15 targeting srv-db user administrator,Brute Force,Windows Event Log,High,
+58,Repeated login attempts against privileged account from 192.168.1.10 targeting web01 user svc_backup,Brute Force,Windows Event Log,High,
+58,Repeated login attempts against privileged account from 192.168.1.10 targeting srv-db user svc_backup,Brute Force,Windows Event Log,High,
+59,Brute force behavior detected against SSH daemon,Brute Force,Wazuh,High,
+59,Brute force behavior detected against SSH daemon from 172.16.0.15 targeting workstation-22 user admin,Brute Force,Wazuh,High,
+59,Brute force behavior detected against SSH daemon from 172.16.0.15 targeting srv-db user john,Brute Force,Wazuh,High,
+59,Brute force behavior detected against SSH daemon from 192.168.1.10 targeting srv-db user svc_backup,Brute Force,Wazuh,High,
+59,Brute force behavior detected against SSH daemon from 172.16.0.15 targeting srv-db user svc_backup,Brute Force,Wazuh,High,
+59,Brute force behavior detected against SSH daemon from 172.16.0.15 targeting srv-db user admin,Brute Force,Wazuh,High,
+60,Excessive authentication failures indicate possible brute force attack,Brute Force,Wazuh,Medium,
+60,Excessive authentication failures indicate possible brute force attack from 192.168.1.10 targeting dc01 user svc_backup,Brute Force,Wazuh,Medium,
+60,Excessive authentication failures indicate possible brute force attack from 10.10.10.20 targeting web01 user svc_backup,Brute Force,Wazuh,Medium,
+60,Excessive authentication failures indicate possible brute force attack from 10.0.0.5 targeting srv-db user admin,Brute Force,Wazuh,Medium,
+60,Excessive authentication failures indicate possible brute force attack from 192.168.1.10 targeting srv-db user administrator,Brute Force,Wazuh,Medium,
+60,Excessive authentication failures indicate possible brute force attack from 10.10.10.20 targeting srv-db user john,Brute Force,Wazuh,Medium,
+61,Encoded PowerShell command executed,Malware,Sysmon,Critical,T1059
+61,Encoded PowerShell command executed from 172.16.0.15 targeting srv-db user john,Malware,Sysmon,Critical,T1059
+61,Encoded PowerShell command executed from 172.16.0.15 targeting web01 user admin,Malware,Sysmon,Critical,T1059
+61,Encoded PowerShell command executed from 10.10.10.20 targeting web01 user admin,Malware,Sysmon,Critical,T1059
+61,Encoded PowerShell command executed from 10.10.10.20 targeting web01 user admin,Malware,Sysmon,Critical,T1059
+61,Encoded PowerShell command executed from 192.168.1.10 targeting srv-db user admin,Malware,Sysmon,Critical,T1059
+62,Suspicious executable downloaded from external server,Malware,Wazuh,Critical,T1204
+62,Suspicious executable downloaded from external server from 172.16.0.15 targeting dc01 user administrator,Malware,Wazuh,Critical,T1204
+62,Suspicious executable downloaded from external server from 10.10.10.20 targeting srv-db user administrator,Malware,Wazuh,Critical,T1204
+62,Suspicious executable downloaded from external server from 192.168.1.10 targeting srv-db user admin,Malware,Wazuh,Critical,T1204
+62,Suspicious executable downloaded from external server from 172.16.0.15 targeting web01 user john,Malware,Wazuh,Critical,T1204
+62,Suspicious executable downloaded from external server from 10.0.0.5 targeting dc01 user john,Malware,Wazuh,Critical,T1204
+63,Known malware hash detected on endpoint,Malware,Wazuh,Critical,T1204
+63,Known malware hash detected on endpoint from 10.0.0.5 targeting web01 user admin,Malware,Wazuh,Critical,T1204
+63,Known malware hash detected on endpoint from 10.0.0.5 targeting workstation-22 user admin,Malware,Wazuh,Critical,T1204
+63,Known malware hash detected on endpoint from 10.10.10.20 targeting dc01 user administrator,Malware,Wazuh,Critical,T1204
+63,Known malware hash detected on endpoint from 10.0.0.5 targeting web01 user john,Malware,Wazuh,Critical,T1204
+63,Known malware hash detected on endpoint from 172.16.0.15 targeting srv-db user svc_backup,Malware,Wazuh,Critical,T1204
+64,Ransomware-like file encryption activity observed,Malware,Sysmon,Critical,T1486
+64,Ransomware-like file encryption activity observed from 192.168.1.10 targeting dc01 user admin,Malware,Sysmon,Critical,T1486
+64,Ransomware-like file encryption activity observed from 10.0.0.5 targeting web01 user administrator,Malware,Sysmon,Critical,T1486
+64,Ransomware-like file encryption activity observed from 172.16.0.15 targeting srv-db user admin,Malware,Sysmon,Critical,T1486
+64,Ransomware-like file encryption activity observed from 172.16.0.15 targeting workstation-22 user svc_backup,Malware,Sysmon,Critical,T1486
+64,Ransomware-like file encryption activity observed from 10.10.10.20 targeting dc01 user admin,Malware,Sysmon,Critical,T1486
+65,Malicious script execution detected,Malware,Sysmon,High,T1059
+65,Malicious script execution detected from 10.0.0.5 targeting srv-db user administrator,Malware,Sysmon,High,T1059
+65,Malicious script execution detected from 10.0.0.5 targeting web01 user svc_backup,Malware,Sysmon,High,T1059
+65,Malicious script execution detected from 10.10.10.20 targeting workstation-22 user svc_backup,Malware,Sysmon,High,T1059
+65,Malicious script execution detected from 192.168.1.10 targeting workstation-22 user admin,Malware,Sysmon,High,T1059
+65,Malicious script execution detected from 192.168.1.10 targeting workstation-22 user john,Malware,Sysmon,High,T1059
+66,Suspicious DLL loaded into process memory,Malware,Sysmon,High,T1055
+66,Suspicious DLL loaded into process memory from 10.10.10.20 targeting dc01 user svc_backup,Malware,Sysmon,High,T1055
+66,Suspicious DLL loaded into process memory from 10.0.0.5 targeting workstation-22 user admin,Malware,Sysmon,High,T1055
+66,Suspicious DLL loaded into process memory from 192.168.1.10 targeting dc01 user administrator,Malware,Sysmon,High,T1055
+66,Suspicious DLL loaded into process memory from 10.0.0.5 targeting dc01 user svc_backup,Malware,Sysmon,High,T1055
+66,Suspicious DLL loaded into process memory from 192.168.1.10 targeting workstation-22 user administrator,Malware,Sysmon,High,T1055
+67,Payload downloaded and executed from remote location,Malware,Wazuh,Critical,T1105
+67,Payload downloaded and executed from remote location from 192.168.1.10 targeting workstation-22 user svc_backup,Malware,Wazuh,Critical,T1105
+67,Payload downloaded and executed from remote location from 10.10.10.20 targeting srv-db user admin,Malware,Wazuh,Critical,T1105
+67,Payload downloaded and executed from remote location from 10.0.0.5 targeting dc01 user john,Malware,Wazuh,Critical,T1105
+67,Payload downloaded and executed from remote location from 10.10.10.20 targeting srv-db user administrator,Malware,Wazuh,Critical,T1105
+67,Payload downloaded and executed from remote location from 192.168.1.10 targeting web01 user administrator,Malware,Wazuh,Critical,T1105
+68,Trojan behavior detected on workstation,Malware,Wazuh,High,T1204
+68,Trojan behavior detected on workstation from 192.168.1.10 targeting dc01 user administrator,Malware,Wazuh,High,T1204
+68,Trojan behavior detected on workstation from 192.168.1.10 targeting dc01 user john,Malware,Wazuh,High,T1204
+68,Trojan behavior detected on workstation from 192.168.1.10 targeting workstation-22 user administrator,Malware,Wazuh,High,T1204
+68,Trojan behavior detected on workstation from 10.0.0.5 targeting workstation-22 user admin,Malware,Wazuh,High,T1204
+68,Trojan behavior detected on workstation from 192.168.1.10 targeting srv-db user admin,Malware,Wazuh,High,T1204
+69,Malicious macro execution detected in document,Malware,Sysmon,High,T1204
+69,Malicious macro execution detected in document from 10.10.10.20 targeting dc01 user svc_backup,Malware,Sysmon,High,T1204
+69,Malicious macro execution detected in document from 172.16.0.15 targeting web01 user administrator,Malware,Sysmon,High,T1204
+69,Malicious macro execution detected in document from 10.10.10.20 targeting web01 user john,Malware,Sysmon,High,T1204
+69,Malicious macro execution detected in document from 172.16.0.15 targeting web01 user admin,Malware,Sysmon,High,T1204
+69,Malicious macro execution detected in document from 10.0.0.5 targeting workstation-22 user administrator,Malware,Sysmon,High,T1204
+70,Unauthorized binary executed from temporary directory,Malware,Wazuh,Medium,T1204
+70,Unauthorized binary executed from temporary directory from 10.0.0.5 targeting workstation-22 user john,Malware,Wazuh,Medium,T1204
+70,Unauthorized binary executed from temporary directory from 192.168.1.10 targeting dc01 user john,Malware,Wazuh,Medium,T1204
+70,Unauthorized binary executed from temporary directory from 172.16.0.15 targeting srv-db user admin,Malware,Wazuh,Medium,T1204
+70,Unauthorized binary executed from temporary directory from 192.168.1.10 targeting workstation-22 user svc_backup,Malware,Wazuh,Medium,T1204
+70,Unauthorized binary executed from temporary directory from 172.16.0.15 targeting web01 user administrator,Malware,Wazuh,Medium,T1204
+71,TCP SYN scan detected against internal network,Reconnaissance,Security Onion,Medium,T1046
+71,TCP SYN scan detected against internal network from 192.168.1.10 targeting web01 user svc_backup,Reconnaissance,Security Onion,Medium,T1046
+71,TCP SYN scan detected against internal network from 192.168.1.10 targeting workstation-22 user john,Reconnaissance,Security Onion,Medium,T1046
+71,TCP SYN scan detected against internal network from 10.10.10.20 targeting dc01 user svc_backup,Reconnaissance,Security Onion,Medium,T1046
+71,TCP SYN scan detected against internal network from 10.10.10.20 targeting srv-db user admin,Reconnaissance,Security Onion,Medium,T1046
+71,TCP SYN scan detected against internal network from 10.0.0.5 targeting dc01 user administrator,Reconnaissance,Security Onion,Medium,T1046
+72,Nmap service discovery scan observed,Reconnaissance,Security Onion,Medium,T1046
+72,Nmap service discovery scan observed from 10.10.10.20 targeting workstation-22 user svc_backup,Reconnaissance,Security Onion,Medium,T1046
+72,Nmap service discovery scan observed from 192.168.1.10 targeting workstation-22 user admin,Reconnaissance,Security Onion,Medium,T1046
+72,Nmap service discovery scan observed from 10.10.10.20 targeting dc01 user john,Reconnaissance,Security Onion,Medium,T1046
+72,Nmap service discovery scan observed from 10.0.0.5 targeting workstation-22 user administrator,Reconnaissance,Security Onion,Medium,T1046
+72,Nmap service discovery scan observed from 192.168.1.10 targeting srv-db user admin,Reconnaissance,Security Onion,Medium,T1046
+73,Multiple hosts scanned within short time period,Reconnaissance,Security Onion,Medium,T1046
+73,Multiple hosts scanned within short time period from 10.0.0.5 targeting workstation-22 user administrator,Reconnaissance,Security Onion,Medium,T1046
+73,Multiple hosts scanned within short time period from 10.10.10.20 targeting workstation-22 user admin,Reconnaissance,Security Onion,Medium,T1046
+73,Multiple hosts scanned within short time period from 10.0.0.5 targeting srv-db user admin,Reconnaissance,Security Onion,Medium,T1046
+73,Multiple hosts scanned within short time period from 192.168.1.10 targeting dc01 user administrator,Reconnaissance,Security Onion,Medium,T1046
+73,Multiple hosts scanned within short time period from 192.168.1.10 targeting srv-db user administrator,Reconnaissance,Security Onion,Medium,T1046
+74,ICMP sweep activity detected across subnet,Reconnaissance,Security Onion,Low,T1018
+74,ICMP sweep activity detected across subnet from 10.0.0.5 targeting web01 user administrator,Reconnaissance,Security Onion,Low,T1018
+74,ICMP sweep activity detected across subnet from 172.16.0.15 targeting srv-db user admin,Reconnaissance,Security Onion,Low,T1018
+74,ICMP sweep activity detected across subnet from 10.10.10.20 targeting srv-db user john,Reconnaissance,Security Onion,Low,T1018
+74,ICMP sweep activity detected across subnet from 10.10.10.20 targeting web01 user john,Reconnaissance,Security Onion,Low,T1018
+74,ICMP sweep activity detected across subnet from 172.16.0.15 targeting web01 user john,Reconnaissance,Security Onion,Low,T1018
+75,Port scanning behavior identified from external IP,Reconnaissance,Security Onion,Medium,T1046
+75,Port scanning behavior identified from external IP from 192.168.1.10 targeting web01 user admin,Reconnaissance,Security Onion,Medium,T1046
+75,Port scanning behavior identified from external IP from 192.168.1.10 targeting dc01 user svc_backup,Reconnaissance,Security Onion,Medium,T1046
+75,Port scanning behavior identified from external IP from 10.10.10.20 targeting workstation-22 user john,Reconnaissance,Security Onion,Medium,T1046
+75,Port scanning behavior identified from external IP from 192.168.1.10 targeting web01 user john,Reconnaissance,Security Onion,Medium,T1046
+75,Port scanning behavior identified from external IP from 192.168.1.10 targeting srv-db user john,Reconnaissance,Security Onion,Medium,T1046
+76,Network reconnaissance activity detected,Reconnaissance,Wazuh,Medium,T1046
+76,Network reconnaissance activity detected from 10.0.0.5 targeting web01 user svc_backup,Reconnaissance,Wazuh,Medium,T1046
+76,Network reconnaissance activity detected from 10.0.0.5 targeting srv-db user admin,Reconnaissance,Wazuh,Medium,T1046
+76,Network reconnaissance activity detected from 10.10.10.20 targeting workstation-22 user admin,Reconnaissance,Wazuh,Medium,T1046
+76,Network reconnaissance activity detected from 192.168.1.10 targeting srv-db user admin,Reconnaissance,Wazuh,Medium,T1046
+76,Network reconnaissance activity detected from 172.16.0.15 targeting web01 user administrator,Reconnaissance,Wazuh,Medium,T1046
+77,Host discovery scan observed against multiple systems,Reconnaissance,Security Onion,Low,T1018
+77,Host discovery scan observed against multiple systems from 172.16.0.15 targeting web01 user svc_backup,Reconnaissance,Security Onion,Low,T1018
+77,Host discovery scan observed against multiple systems from 10.0.0.5 targeting web01 user john,Reconnaissance,Security Onion,Low,T1018
+77,Host discovery scan observed against multiple systems from 10.0.0.5 targeting web01 user svc_backup,Reconnaissance,Security Onion,Low,T1018
+77,Host discovery scan observed against multiple systems from 192.168.1.10 targeting workstation-22 user administrator,Reconnaissance,Security Onion,Low,T1018
+77,Host discovery scan observed against multiple systems from 192.168.1.10 targeting srv-db user svc_backup,Reconnaissance,Security Onion,Low,T1018
+78,Sequential port probing detected,Reconnaissance,Security Onion,Medium,T1046
+78,Sequential port probing detected from 192.168.1.10 targeting srv-db user admin,Reconnaissance,Security Onion,Medium,T1046
+78,Sequential port probing detected from 192.168.1.10 targeting srv-db user john,Reconnaissance,Security Onion,Medium,T1046
+78,Sequential port probing detected from 192.168.1.10 targeting web01 user john,Reconnaissance,Security Onion,Medium,T1046
+78,Sequential port probing detected from 10.0.0.5 targeting srv-db user administrator,Reconnaissance,Security Onion,Medium,T1046
+78,Sequential port probing detected from 192.168.1.10 targeting srv-db user administrator,Reconnaissance,Security Onion,Medium,T1046
+79,High volume of connection attempts suggests port scanning,Reconnaissance,Security Onion,Medium,T1046
+79,High volume of connection attempts suggests port scanning from 192.168.1.10 targeting web01 user administrator,Reconnaissance,Security Onion,Medium,T1046
+79,High volume of connection attempts suggests port scanning from 10.0.0.5 targeting workstation-22 user john,Reconnaissance,Security Onion,Medium,T1046
+79,High volume of connection attempts suggests port scanning from 172.16.0.15 targeting dc01 user svc_backup,Reconnaissance,Security Onion,Medium,T1046
+79,High volume of connection attempts suggests port scanning from 192.168.1.10 targeting workstation-22 user john,Reconnaissance,Security Onion,Medium,T1046
+79,High volume of connection attempts suggests port scanning from 172.16.0.15 targeting dc01 user svc_backup,Reconnaissance,Security Onion,Medium,T1046
+80,Service enumeration activity detected,Reconnaissance,Wazuh,Low,T1046
+80,Service enumeration activity detected from 192.168.1.10 targeting srv-db user admin,Reconnaissance,Wazuh,Low,T1046
+80,Service enumeration activity detected from 172.16.0.15 targeting srv-db user admin,Reconnaissance,Wazuh,Low,T1046
+80,Service enumeration activity detected from 172.16.0.15 targeting dc01 user administrator,Reconnaissance,Wazuh,Low,T1046
+80,Service enumeration activity detected from 10.0.0.5 targeting srv-db user admin,Reconnaissance,Wazuh,Low,T1046
+80,Service enumeration activity detected from 10.10.10.20 targeting web01 user administrator,Reconnaissance,Wazuh,Low,T1046
+81,Credential harvesting email detected,Phishing,Microsoft Defender,High,T1566
+81,Credential harvesting email detected from 10.10.10.20 targeting dc01 user admin,Phishing,Microsoft Defender,High,T1566
+81,Credential harvesting email detected from 172.16.0.15 targeting web01 user admin,Phishing,Microsoft Defender,High,T1566
+81,Credential harvesting email detected from 192.168.1.10 targeting web01 user svc_backup,Phishing,Microsoft Defender,High,T1566
+81,Credential harvesting email detected from 172.16.0.15 targeting workstation-22 user administrator,Phishing,Microsoft Defender,High,T1566
+81,Credential harvesting email detected from 10.0.0.5 targeting dc01 user svc_backup,Phishing,Microsoft Defender,High,T1566
+82,Malicious URL embedded in email message,Phishing,Email Gateway,High,T1566
+82,Malicious URL embedded in email message from 10.10.10.20 targeting workstation-22 user john,Phishing,Email Gateway,High,T1566
+82,Malicious URL embedded in email message from 172.16.0.15 targeting web01 user admin,Phishing,Email Gateway,High,T1566
+82,Malicious URL embedded in email message from 192.168.1.10 targeting workstation-22 user john,Phishing,Email Gateway,High,T1566
+82,Malicious URL embedded in email message from 192.168.1.10 targeting workstation-22 user administrator,Phishing,Email Gateway,High,T1566
+82,Malicious URL embedded in email message from 10.10.10.20 targeting workstation-22 user administrator,Phishing,Email Gateway,High,T1566
+83,User accessed known phishing domain,Phishing,Wazuh,High,T1566
+83,User accessed known phishing domain from 172.16.0.15 targeting srv-db user svc_backup,Phishing,Wazuh,High,T1566
+83,User accessed known phishing domain from 10.0.0.5 targeting workstation-22 user administrator,Phishing,Wazuh,High,T1566
+83,User accessed known phishing domain from 10.0.0.5 targeting dc01 user svc_backup,Phishing,Wazuh,High,T1566
+83,User accessed known phishing domain from 10.0.0.5 targeting dc01 user administrator,Phishing,Wazuh,High,T1566
+83,User accessed known phishing domain from 10.10.10.20 targeting web01 user svc_backup,Phishing,Wazuh,High,T1566
+84,Suspicious email attachment opened by user,Phishing,Microsoft Defender,High,T1566
+84,Suspicious email attachment opened by user from 10.0.0.5 targeting web01 user john,Phishing,Microsoft Defender,High,T1566
+84,Suspicious email attachment opened by user from 172.16.0.15 targeting dc01 user svc_backup,Phishing,Microsoft Defender,High,T1566
+84,Suspicious email attachment opened by user from 192.168.1.10 targeting srv-db user admin,Phishing,Microsoft Defender,High,T1566
+84,Suspicious email attachment opened by user from 10.0.0.5 targeting srv-db user svc_backup,Phishing,Microsoft Defender,High,T1566
+84,Suspicious email attachment opened by user from 192.168.1.10 targeting workstation-22 user svc_backup,Phishing,Microsoft Defender,High,T1566
+85,Email containing spoofed login page detected,Phishing,Email Gateway,Medium,T1566
+85,Email containing spoofed login page detected from 192.168.1.10 targeting srv-db user svc_backup,Phishing,Email Gateway,Medium,T1566
+85,Email containing spoofed login page detected from 172.16.0.15 targeting srv-db user john,Phishing,Email Gateway,Medium,T1566
+85,Email containing spoofed login page detected from 10.10.10.20 targeting dc01 user svc_backup,Phishing,Email Gateway,Medium,T1566
+85,Email containing spoofed login page detected from 10.0.0.5 targeting web01 user administrator,Phishing,Email Gateway,Medium,T1566
+85,Email containing spoofed login page detected from 172.16.0.15 targeting web01 user admin,Phishing,Email Gateway,Medium,T1566
+86,Potential business email compromise attempt observed,Phishing,Microsoft Defender,High,T1566
+86,Potential business email compromise attempt observed from 172.16.0.15 targeting web01 user svc_backup,Phishing,Microsoft Defender,High,T1566
+86,Potential business email compromise attempt observed from 192.168.1.10 targeting workstation-22 user svc_backup,Phishing,Microsoft Defender,High,T1566
+86,Potential business email compromise attempt observed from 172.16.0.15 targeting srv-db user svc_backup,Phishing,Microsoft Defender,High,T1566
+86,Potential business email compromise attempt observed from 10.0.0.5 targeting srv-db user administrator,Phishing,Microsoft Defender,High,T1566
+86,Potential business email compromise attempt observed from 172.16.0.15 targeting dc01 user svc_backup,Phishing,Microsoft Defender,High,T1566
+87,User submitted credentials to suspicious website,Phishing,Wazuh,Critical,T1566
+87,User submitted credentials to suspicious website from 172.16.0.15 targeting dc01 user admin,Phishing,Wazuh,Critical,T1566
+87,User submitted credentials to suspicious website from 10.0.0.5 targeting web01 user administrator,Phishing,Wazuh,Critical,T1566
+87,User submitted credentials to suspicious website from 10.10.10.20 targeting dc01 user john,Phishing,Wazuh,Critical,T1566
+87,User submitted credentials to suspicious website from 192.168.1.10 targeting workstation-22 user svc_backup,Phishing,Wazuh,Critical,T1566
+87,User submitted credentials to suspicious website from 10.0.0.5 targeting web01 user admin,Phishing,Wazuh,Critical,T1566
+88,Phishing campaign targeting corporate users detected,Phishing,Email Gateway,High,T1566
+88,Phishing campaign targeting corporate users detected from 10.10.10.20 targeting srv-db user administrator,Phishing,Email Gateway,High,T1566
+88,Phishing campaign targeting corporate users detected from 10.10.10.20 targeting dc01 user admin,Phishing,Email Gateway,High,T1566
+88,Phishing campaign targeting corporate users detected from 192.168.1.10 targeting workstation-22 user admin,Phishing,Email Gateway,High,T1566
+88,Phishing campaign targeting corporate users detected from 192.168.1.10 targeting web01 user john,Phishing,Email Gateway,High,T1566
+88,Phishing campaign targeting corporate users detected from 192.168.1.10 targeting srv-db user admin,Phishing,Email Gateway,High,T1566
+89,Suspicious hyperlink clicked from email,Phishing,Microsoft Defender,Medium,T1566
+89,Suspicious hyperlink clicked from email from 192.168.1.10 targeting srv-db user admin,Phishing,Microsoft Defender,Medium,T1566
+89,Suspicious hyperlink clicked from email from 10.0.0.5 targeting web01 user john,Phishing,Microsoft Defender,Medium,T1566
+89,Suspicious hyperlink clicked from email from 10.0.0.5 targeting srv-db user administrator,Phishing,Microsoft Defender,Medium,T1566
+89,Suspicious hyperlink clicked from email from 192.168.1.10 targeting web01 user john,Phishing,Microsoft Defender,Medium,T1566
+89,Suspicious hyperlink clicked from email from 10.10.10.20 targeting web01 user john,Phishing,Microsoft Defender,Medium,T1566
+90,Email attachment executed malicious script,Phishing,Microsoft Defender,Critical,T1566
+90,Email attachment executed malicious script from 10.0.0.5 targeting web01 user administrator,Phishing,Microsoft Defender,Critical,T1566
+90,Email attachment executed malicious script from 10.0.0.5 targeting srv-db user admin,Phishing,Microsoft Defender,Critical,T1566
+90,Email attachment executed malicious script from 10.10.10.20 targeting dc01 user john,Phishing,Microsoft Defender,Critical,T1566
+90,Email attachment executed malicious script from 172.16.0.15 targeting srv-db user john,Phishing,Microsoft Defender,Critical,T1566
+90,Email attachment executed malicious script from 192.168.1.10 targeting srv-db user svc_backup,Phishing,Microsoft Defender,Critical,T1566

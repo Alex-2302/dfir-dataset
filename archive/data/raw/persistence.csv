@@ -1,0 +1,11 @@
+alert_text,category,source,severity,technique
+"Scheduled task created for persistence",Persistence,Wazuh,High,T1053
+"Registry startup key modified",Persistence,Sysmon,High,T1547
+"New startup service installed",Persistence,Wazuh,High,T1543
+"Cron job created for recurring execution",Persistence,Linux Audit,Medium,T1053
+"Persistence mechanism established through scheduled task",Persistence,Wazuh,High,T1053
+"Windows Run registry key modified",Persistence,Sysmon,High,T1547
+"Unauthorized service installation detected",Persistence,Wazuh,High,T1543
+"Startup folder modified with executable",Persistence,Sysmon,Medium,T1547
+"Backdoor configured for automatic execution",Persistence,Wazuh,Critical,T1547
+"Persistence achieved through registry modification",Persistence,Sysmon,High,T1547
