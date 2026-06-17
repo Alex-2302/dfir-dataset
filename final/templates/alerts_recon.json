@@ -70,5 +70,13 @@
     "category": "Reconnaissance",
     "mitre_attack": "T1069.002",
     "recommendation": "Investigate the initiating host and account. Review LDAP queries, validate administrative group membership requests, and monitor for privilege escalation or lateral movement activity."
+  },
+  {
+    "alert": "Network Service Enumeration Detected",
+    "response": "A host performed extensive enumeration of network services across multiple systems, potentially identifying accessible services and attack paths.",
+    "severity": "Medium",
+    "category": "Reconnaissance",
+    "mitre_attack": "T1046",
+    "recommendation": "Review network scanning activity, identify the originating host, validate authorized assessment activity, and investigate unauthorized service discovery."
   }
 ]

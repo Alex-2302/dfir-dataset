@@ -1,0 +1,83 @@
+
+[
+{
+  "alert": "Windows Service Modification Detected",
+  "response": "A Windows service configuration was modified using sc.exe to execute a PowerShell payload under the service context, potentially enabling privilege escalation or persistence.",
+  "severity": "High",
+  "category": "Privilege Escalation",
+  "mitre_attack": "T1543.003",
+  "recommendation": "Review service configuration changes, inspect modified service binary paths, identify the originating account, and restore unauthorized service modifications."
+},
+{
+  "alert": "Fodhelper UAC Bypass Detected",
+  "response": "PowerShell launched fodhelper.exe, a trusted Windows auto-elevating binary commonly abused to bypass User Account Control (UAC) and obtain elevated privileges.",
+  "severity": "High",
+  "category": "Privilege Escalation",
+  "mitre_attack": "T1548.002",
+  "recommendation": "Investigate registry modifications associated with fodhelper.exe, review the parent PowerShell process, verify user activity, and terminate unauthorized elevated sessions."
+},
+{
+  "alert": "RunAs Credential Elevation Detected",
+  "response": "A process attempted to log on using explicit credentials associated with another user account, consistent with RunAs activity that may be used to elevate privileges or execute actions under a different security context.",
+  "severity": "High",
+  "category": "Privilege Escalation",
+  "mitre_attack": "T1078",
+  "recommendation": "Review the source and target accounts, validate the use of explicit credentials, investigate related process activity, and verify whether the elevation attempt was authorized."
+},
+{
+  "alert": "Token Impersonation Detected",
+  "response": "A process attempted to impersonate or duplicate an access token from another user or process, potentially gaining elevated privileges.",
+  "severity": "High",
+  "category": "Privilege Escalation",
+  "mitre_attack": "T1134",
+  "recommendation": "Review token manipulation activity, identify affected processes, and investigate unauthorized privilege usage."
+},
+{
+  "alert": "Unquoted Service Path Privilege Escalation Detected",
+  "response": "A Windows service was configured with an unquoted executable path, potentially allowing attackers to execute code with elevated privileges.",
+  "severity": "High",
+  "category": "Privilege Escalation",
+  "mitre_attack": "T1574.009",
+  "recommendation": "Review service configurations, correct unquoted paths, and investigate suspicious executable placements."
+},
+{
+  "alert": "Scheduled Task Elevation Detected",
+  "response": "A scheduled task was created or modified to execute under a privileged account, potentially enabling privilege escalation.",
+  "severity": "High",
+  "category": "Privilege Escalation",
+  "mitre_attack": "T1053.005",
+  "recommendation": "Inspect task configurations, review execution accounts, and remove unauthorized elevated tasks."
+},
+{
+  "alert": "Registry UAC Bypass Detected",
+  "response": "Registry settings associated with auto-elevated Windows components were modified to bypass User Account Control protections.",
+  "severity": "High",
+  "category": "Privilege Escalation",
+  "mitre_attack": "T1548.002",
+  "recommendation": "Review modified registry values, identify affected binaries, and restore secure UAC settings."
+},
+{
+  "alert": "Accessibility Features Abuse Detected",
+  "response": "Windows accessibility binaries were modified or abused to launch commands with elevated privileges before user authentication.",
+  "severity": "High",
+  "category": "Privilege Escalation",
+  "mitre_attack": "T1546.008",
+  "recommendation": "Review accessibility executable integrity, restore legitimate binaries, and investigate unauthorized modifications."
+},
+{
+  "alert": "COM Elevation Moniker Abuse Detected",
+  "response": "A process abused COM elevation mechanisms to execute code with elevated privileges without user approval.",
+  "severity": "High",
+  "category": "Privilege Escalation",
+  "mitre_attack": "T1548.002",
+  "recommendation": "Review COM object activity, investigate associated processes, and verify legitimacy of elevation requests."
+},
+{
+  "alert": "DLL Search Order Hijacking Privilege Escalation Detected",
+  "response": "A privileged application loaded an attacker-controlled DLL due to DLL search order manipulation, potentially resulting in elevated code execution.",
+  "severity": "High",
+  "category": "Privilege Escalation",
+  "mitre_attack": "T1574.001",
+  "recommendation": "Review loaded DLLs, verify application directories, and investigate unauthorized library placement."
+}
+]

@@ -1,0 +1,82 @@
+[
+  {
+    "alert": "SSH Brute Force Detected",
+    "response": "Multiple failed SSH authentication attempts were observed from a single source host, indicating an attempt to guess valid credentials through repeated login attempts.",
+    "severity": "High",
+    "category": "Brute Force",
+    "mitre_attack": "T1110.001",
+    "recommendation": "Review SSH authentication logs, identify the source host, block malicious IP addresses, and enforce multi-factor authentication where possible."
+  },
+  {
+    "alert": "FTP Brute Force Detected",
+    "response": "Repeated failed FTP login attempts were detected against a server, suggesting a brute force attack targeting user credentials.",
+    "severity": "High",
+    "category": "Brute Force",
+    "mitre_attack": "T1110.001",
+    "recommendation": "Investigate the source of authentication failures, review affected accounts, and implement account lockout policies."
+  },
+  {
+    "alert": "RDP Brute Force Detected",
+    "response": "A large number of failed Remote Desktop Protocol (RDP) authentication attempts were observed within a short period, indicating possible unauthorized access attempts.",
+    "severity": "High",
+    "category": "Brute Force",
+    "mitre_attack": "T1110.001",
+    "recommendation": "Review failed logon events, verify targeted accounts, enable multi-factor authentication, and restrict RDP exposure."
+  },
+  {
+    "alert": "Password Spray Attack Detected",
+    "response": "A single password was used to attempt authentication against multiple user accounts, consistent with password spraying activity.",
+    "severity": "High",
+    "category": "Brute Force",
+    "mitre_attack": "T1110.003",
+    "recommendation": "Identify affected accounts, enforce strong password policies, monitor authentication logs, and enable multi-factor authentication."
+  },
+  {
+    "alert": "Credential Stuffing Attack Detected",
+    "response": "Previously compromised username and password combinations were used in repeated authentication attempts across multiple accounts, indicating credential stuffing activity.",
+    "severity": "High",
+    "category": "Brute Force",
+    "mitre_attack": "T1110.004",
+    "recommendation": "Reset exposed credentials, investigate affected accounts, monitor login activity, and enforce multi-factor authentication."
+  },
+  {
+    "alert": "SMB Brute Force Detected",
+    "response": "Multiple failed SMB authentication attempts were observed against a file-sharing service, indicating potential password guessing activity.",
+    "severity": "High",
+    "category": "Brute Force",
+    "mitre_attack": "T1110",
+    "recommendation": "Review SMB authentication logs, verify targeted accounts, and block suspicious source systems."
+  },
+  {
+    "alert": "VPN Brute Force Detected",
+    "response": "A large number of failed VPN login attempts were detected from a single source, indicating a possible brute force attack.",
+    "severity": "High",
+    "category": "Brute Force",
+    "mitre_attack": "T1110",
+    "recommendation": "Review VPN authentication logs, identify the source host, and enforce multi-factor authentication."
+  },
+  {
+    "alert": "Exchange Login Brute Force Detected",
+    "response": "Repeated failed authentication attempts targeting Microsoft Exchange services were observed, suggesting credential guessing activity.",
+    "severity": "High",
+    "category": "Brute Force",
+    "mitre_attack": "T1110",
+    "recommendation": "Review Exchange authentication logs, identify affected accounts, and block malicious source addresses."
+   },
+  {
+    "alert": "OWA Brute Force Detected",
+    "response": "Numerous failed login attempts were detected against Outlook Web Access (OWA), indicating a possible brute force attack.",
+    "severity": "High",
+    "category": "Brute Force",
+    "mitre_attack": "T1110",
+    "recommendation": "Review OWA logs, investigate targeted accounts, and implement account lockout controls."
+  },
+  {
+    "alert": "Database Login Brute Force Detected",
+    "response": "Repeated failed authentication attempts were observed against a database service, indicating possible password guessing activity.",
+    "severity": "High",
+    "category": "Brute Force",
+    "mitre_attack": "T1110",
+    "recommendation": "Review database authentication logs, investigate targeted accounts, and restrict access from suspicious sources."
+  }
+]

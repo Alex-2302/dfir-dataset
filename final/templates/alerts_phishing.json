@@ -1,0 +1,82 @@
+[
+  {
+    "alert": "Credential Harvesting Phishing Detected",
+    "response": "A phishing email directed users to a fraudulent login page designed to capture usernames and passwords.",
+    "severity": "High",
+    "category": "Phishing",
+    "mitre_attack": "T1566.002",
+    "recommendation": "Identify affected users, reset compromised credentials, block the phishing domain, and review authentication logs."
+  },
+  {
+    "alert": "Malicious Email Attachment Detected",
+    "response": "An email containing a suspicious attachment capable of executing malicious code was delivered to a user mailbox.",
+    "severity": "High",
+    "category": "Phishing",
+    "mitre_attack": "T1566.001",
+    "recommendation": "Quarantine the attachment, identify recipients, and scan affected systems for malicious activity."
+  },
+  {
+    "alert": "Business Email Compromise Detected",
+    "response": "An email impersonating a trusted executive or business partner attempted to deceive recipients into performing unauthorized actions.",
+    "severity": "High",
+    "category": "Phishing",
+    "mitre_attack": "T1566",
+    "recommendation": "Verify sender legitimacy, review email headers, and notify potentially affected users."
+  },
+  {
+    "alert": "HTML Smuggling Phishing Detected",
+    "response": "A phishing email contained an HTML attachment designed to reconstruct and deliver a malicious payload within the user's browser.",
+    "severity": "High",
+    "category": "Phishing",
+    "mitre_attack": "T1027.006",
+    "recommendation": "Inspect downloaded files, review browser activity, and strengthen email filtering controls."
+  },
+  {
+    "alert": "QR Code Phishing Detected",
+    "response": "A phishing message contained a QR code directing users to a malicious website intended to steal credentials or deliver malware.",
+    "severity": "High",
+    "category": "Phishing",
+    "mitre_attack": "T1566.002",
+    "recommendation": "Block the destination URL, notify affected users, and provide awareness training."
+  },
+  {
+    "alert": "MFA Fatigue Phishing Detected",
+    "response": "Repeated authentication prompts were sent to a user in an attempt to trick them into approving unauthorized access requests.",
+    "severity": "High",
+    "category": "Phishing",
+    "mitre_attack": "T1621",
+    "recommendation": "Review authentication logs, investigate affected accounts, and educate users about push notification abuse."
+  },
+  {
+    "alert": "OneDrive Phishing Campaign Detected",
+    "response": "A phishing email impersonated a OneDrive file-sharing notification and redirected users to a fraudulent login page.",
+    "severity": "High",
+    "category": "Phishing",
+    "mitre_attack": "T1566.002",
+    "recommendation": "Block malicious URLs, verify account activity, and reset compromised credentials."
+  },
+  {
+    "alert": "SharePoint Phishing Campaign Detected",
+    "response": "Users received emails impersonating SharePoint notifications that attempted to harvest Microsoft 365 credentials.",
+    "severity": "High",
+    "category": "Phishing",
+    "mitre_attack": "T1566.002",
+    "recommendation": "Review affected accounts, block phishing domains, and monitor for unauthorized logins."
+  },
+  {
+    "alert": "Reply Chain Phishing Detected",
+    "response": "A phishing email was inserted into an existing email conversation to increase trust and encourage user interaction.",
+    "severity": "High",
+    "category": "Phishing",
+    "mitre_attack": "T1566",
+    "recommendation": "Review email threads, validate sender identity, and alert recipients of the phishing attempt."
+  },
+  {
+    "alert": "Macro-Enabled Document Phishing Detected",
+    "response": "A phishing email delivered a document containing malicious macros designed to execute code when opened by the user.",
+    "severity": "High",
+    "category": "Phishing",
+    "mitre_attack": "T1566.001",
+    "recommendation": "Quarantine the document, inspect affected endpoints, and disable unnecessary macro execution."
+  }
+]

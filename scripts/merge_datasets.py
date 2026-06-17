@@ -1,21 +1,22 @@
-import pandas as pd
-from pathlib import Path
+import json
+import glob
+import os
 
-raw_dir = Path("data/raw")
+master = []
 
-all_data = []
+for file in glob.glob("*_dataset.json"):
 
-for file in raw_dir.glob("*.csv"):
-    df = pd.read_csv(file)
-    all_data.append(df)
+    with open(file) as f:
+        data = json.load(f)
 
-merged = pd.concat(all_data, ignore_index=True)
+    master.extend(data)
 
-merged.insert(0, "id", range(1, len(merged) + 1))
+    print(f"{file}: {len(data)} alerts")
 
-merged.to_csv(
-    "data/processed/master_dataset.csv",
-    index=False
-)
+os.makedirs("../", exist_ok=True)
 
-print(f"Saved {len(merged)} records to data/processed/master_dataset.csv")
+with open("/home/alex/Documents/Dfir-dataset/full_dataset/alerts_master_dataset.json", "w") as f:
+    json.dump(master, f, indent=2)
+
+print()
+print("Total alerts:", len(master))

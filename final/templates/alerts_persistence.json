@@ -1,0 +1,82 @@
+[
+  {
+    "alert": "Registry Run Key Persistence Detected",
+    "response": "A registry Run key was created or modified under HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run to execute a PowerShell payload at user logon.",
+    "severity": "High",
+    "category": "Persistence",
+    "mitre_attack": "T1547.001",
+    "recommendation": "Investigate the modified Run key, review the PowerShell command, identify the originating process, and remove unauthorized autorun entries."
+  },
+  {
+    "alert": "Startup Folder Persistence Detected",
+    "response": "PowerShell created a batch file in the Windows Startup folder to achieve persistence across user logons.",
+    "severity": "High",
+    "category": "Persistence",
+    "mitre_attack": "T1547.001",
+    "recommendation": "Investigate the created file, review PowerShell execution history, and remove unauthorized startup items."
+  },
+  {
+    "alert": "WMI Event Subscription Persistence Detected",
+    "response": "A WMI event subscription was created to execute malicious code automatically when a specified event occurs.",
+    "severity": "High",
+    "category": "Persistence",
+    "mitre_attack": "T1546.003",
+    "recommendation": "Review WMI event filters, consumers, and bindings. Remove unauthorized subscriptions and investigate the originating process."
+  },
+  {
+    "alert": "Scheduled Task Persistence Detected",
+    "response": "A scheduled task was created using schtasks.exe to execute a PowerShell payload at user logon under the SYSTEM account.",
+    "severity": "High",
+    "category": "Persistence",
+    "mitre_attack": "T1053.005",
+    "recommendation": "Review the created scheduled task, verify its legitimacy, inspect the PowerShell payload, and remove unauthorized tasks."
+  },
+  {
+    "alert": "Logon Script Persistence Detected",
+    "response": "A UserInitMprLogonScript registry value was created or modified to execute a batch script automatically during user logon, establishing persistence on the system.",
+    "severity": "High",
+    "category": "Persistence",
+    "mitre_attack": "T1037.001",
+    "recommendation": "Review the configured logon script, identify the originating process, validate its legitimacy, and remove unauthorized logon script persistence mechanisms."
+  },
+  {
+  "alert": "Windows Service Persistence Detected",
+  "response": "A Windows service was created or modified to automatically launch a payload during system startup, providing persistent access to the host.",
+  "severity": "High",
+  "category": "Persistence",
+  "mitre_attack": "T1543.003",
+  "recommendation": "Review service configurations, inspect service binary paths, identify the originating account, and remove unauthorized services."
+ },
+ {
+  "alert": "Winlogon Registry Persistence Detected",
+  "response": "Winlogon registry values were modified to launch a payload during user authentication, establishing persistence on the system.",
+  "severity": "High",
+  "category": "Persistence",
+  "mitre_attack": "T1547.004",
+  "recommendation": "Review Winlogon registry settings, verify configured executables, and remove unauthorized modifications."
+ },
+ {
+  "alert": "BITS Job Persistence Detected",
+  "response": "A Background Intelligent Transfer Service (BITS) job was configured to execute a payload, providing persistence across system reboots.",
+  "severity": "High",
+  "category": "Persistence",
+  "mitre_attack": "T1197",
+  "recommendation": "Inspect active BITS jobs, identify associated payloads, and remove unauthorized scheduled transfers."
+ },
+ {
+  "alert": "DLL Search Order Hijacking Persistence Detected",
+  "response": "A malicious DLL was placed in a location where it may be automatically loaded by a legitimate application, enabling persistent code execution.",
+  "severity": "High",
+  "category": "Persistence",
+  "mitre_attack": "T1574.001",
+  "recommendation": "Review application directories for unauthorized DLLs, verify file integrity, and remove malicious libraries."
+ },
+ {
+  "alert": "COM Hijacking Persistence Detected",
+  "response": "COM registry entries were modified to redirect legitimate COM object execution to attacker-controlled code, establishing persistence.",
+  "severity": "High",
+  "category": "Persistence",
+  "mitre_attack": "T1546.015",
+  "recommendation": "Review COM registry modifications, identify affected components, and restore legitimate COM registrations."
+ }
+]

@@ -1,0 +1,82 @@
+[
+  {
+    "alert": "FTP Data Exfiltration Detected",
+    "response": "A large volume of data was transferred from an internal system to an external FTP server, indicating potential unauthorized data exfiltration.",
+    "severity": "High",
+    "category": "Data Exfiltration",
+    "mitre_attack": "T1048.003",
+    "recommendation": "Review FTP transfer logs, identify transferred files, validate destination hosts, and block unauthorized outbound transfers."
+  },
+  {
+    "alert": "SFTP Data Exfiltration Detected",
+    "response": "Sensitive files were transferred over Secure File Transfer Protocol (SFTP) to an external destination outside approved business processes.",
+    "severity": "High",
+    "category": "Data Exfiltration",
+    "mitre_attack": "T1048",
+    "recommendation": "Review SFTP sessions, verify destination systems, and investigate the transferred data."
+  },
+  {
+    "alert": "Cloud Storage Data Exfiltration Detected",
+    "response": "Large volumes of files were uploaded to a cloud storage service, potentially exposing sensitive organizational information.",
+    "severity": "High",
+    "category": "Data Exfiltration",
+    "mitre_attack": "T1567.002",
+    "recommendation": "Review cloud upload activity, identify affected files, and restrict unauthorized cloud storage usage."
+  },
+  {
+    "alert": "DNS Tunneling Data Exfiltration Detected",
+    "response": "DNS requests contained abnormal encoded data patterns consistent with covert exfiltration through DNS tunneling.",
+    "severity": "Critical",
+    "category": "Data Exfiltration",
+    "mitre_attack": "T1048",
+    "recommendation": "Inspect DNS traffic, identify encoded payloads, and block suspicious domains."
+  },
+  {
+    "alert": "Email Data Exfiltration Detected",
+    "response": "Sensitive files were transmitted through outbound email communications to an unauthorized recipient.",
+    "severity": "High",
+    "category": "Data Exfiltration",
+    "mitre_attack": "T1048",
+    "recommendation": "Review email logs, identify recipients, and investigate the transmitted content."
+  },
+  {
+    "alert": "HTTPS Data Exfiltration Detected",
+    "response": "An unusual volume of encrypted outbound web traffic was observed, potentially concealing unauthorized data transfers.",
+    "severity": "High",
+    "category": "Data Exfiltration",
+    "mitre_attack": "T1041",
+    "recommendation": "Inspect outbound HTTPS connections, review destination domains, and analyze transferred data where possible."
+  },
+  {
+    "alert": "Removable Media Data Exfiltration Detected",
+    "response": "A significant amount of data was copied to a removable storage device, indicating possible unauthorized data removal.",
+    "severity": "High",
+    "category": "Data Exfiltration",
+    "mitre_attack": "T1052.001",
+    "recommendation": "Identify the connected device, review copied files, and verify whether the transfer was authorized."
+  },
+  {
+    "alert": "Compressed Archive Exfiltration Detected",
+    "response": "Sensitive files were compressed into archive formats prior to transfer, a common technique used to facilitate data exfiltration.",
+    "severity": "Medium",
+    "category": "Data Exfiltration",
+    "mitre_attack": "T1020",
+    "recommendation": "Inspect generated archives, review file contents, and investigate subsequent transfer activity."
+  },
+  {
+    "alert": "GitHub Repository Data Exfiltration Detected",
+    "response": "Internal files were uploaded to a public or unauthorized GitHub repository, potentially exposing sensitive information.",
+    "severity": "High",
+    "category": "Data Exfiltration",
+    "mitre_attack": "T1567.001",
+    "recommendation": "Identify uploaded content, remove exposed data, rotate affected credentials, and review repository access."
+  },
+  {
+    "alert": "Rclone Data Exfiltration Detected",
+    "response": "The Rclone utility was used to transfer files from an internal system to an external cloud storage provider.",
+    "severity": "High",
+    "category": "Data Exfiltration",
+    "mitre_attack": "T1567.002",
+    "recommendation": "Review Rclone execution activity, identify transferred files, and block unauthorized cloud synchronization."
+  }
+]
