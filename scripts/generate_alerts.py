@@ -32,7 +32,7 @@ def random_timestamp():
         timedelta(seconds=random.randint(0, int(diff.total_seconds())))
     ).isoformat()
 
-with open("final/templates/alerts_recon.json") as f:
+with open("final/templates/alerts_lateral_movement.json") as f:
     templates = json.load(f)
 
 dataset = []
@@ -66,7 +66,7 @@ for alert in templates:
     counter += 1
 
 with open(
-    "final/generated/recon_dataset.json",
+    "final/generated/lateral_movement_dataset.json",
     "w"
 ) as f:
     json.dump(dataset, f, indent=2)

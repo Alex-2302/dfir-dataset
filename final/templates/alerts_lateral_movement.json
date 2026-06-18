@@ -1,139 +1,83 @@
 [
   {
-    "alert": "InstallUtil Proxy Execution Detected",
-    "response": "InstallUtil.exe was executed to run a .NET assembly, potentially bypassing application control mechanisms and executing malicious code through a trusted Windows binary.",
+    "alert": "PsExec Remote Execution Detected",
+    "response": "PsExec was used to create and execute a service on a remote host, potentially enabling lateral movement across the network.",
     "severity": "High",
-    "category": "Malware",
-    "mitre_attack": "T1218.004",
-    "recommendation": "Review the executed .NET assembly, inspect the parent process, verify the legitimacy of InstallUtil activity, and investigate potential malicious code execution."
+    "category": "Lateral Movement",
+    "mitre_attack": "T1021.002",
+    "recommendation": "Review remote service creation activity, validate administrative access, and investigate related lateral movement attempts."
   },
   {
-    "alert": "Regsvr32 Scriptlet Execution Detected",
-    "response": "Regsvr32.exe was used to execute a remote or local scriptlet file, potentially bypassing application controls and executing malicious code through a trusted Windows utility.",
+    "alert": "PsExec Remote Execution Detected",
+    "response": "PsExec was used to create and execute a service on a remote system through the Service Control Manager, potentially enabling lateral movement across the network.",
     "severity": "High",
-    "category": "Malware",
-    "mitre_attack": "T1218.010",
-    "recommendation": "Investigate the referenced scriptlet, review network connections associated with Regsvr32.exe, verify the parent process, and block unauthorized scriptlet execution."
+    "category": "Lateral Movement",
+    "mitre_attack": "T1021.002",
+    "recommendation": "Review remote service creation activity, validate administrative access, inspect executed commands, and investigate related lateral movement attempts."
   },
   {
-    "alert": "Mshta Scriptlet Execution Detected",
-    "response": "Mshta.exe executed a scriptlet using JavaScript and GetObject functionality, a technique commonly used to bypass application controls and launch malicious payloads.",
+    "alert": "SMBExec Remote Command Execution Detected",
+    "response": "SMBExec was used to execute commands on a remote host via SMB and the Service Control Manager, indicating potential lateral movement activity.",
     "severity": "High",
-    "category": "Malware",
-    "mitre_attack": "T1218.005",
-    "recommendation": "Review the executed script content, inspect command-line arguments, identify the parent process, and investigate potential malicious payload delivery."
+    "category": "Lateral Movement",
+    "mitre_attack": "T1021.002",
+    "recommendation": "Review SMB administrative share activity, validate remote command execution, and investigate the source account and host."
   },
   {
-    "alert": "Mshta PowerShell Execution Detected",
-    "response": "Mshta.exe executed a VBScript that launched PowerShell, indicating possible malicious code execution through a trusted Windows binary.",
+    "alert": "PowerShell Remoting Activity Detected",
+    "response": "PowerShell Remoting was used to execute commands on a remote system, potentially enabling lateral movement within the environment.",
     "severity": "High",
-    "category": "Malware",
-    "mitre_attack": "T1218.005",
-    "recommendation": "Investigate the PowerShell command, review the associated script content, validate the execution source, and terminate unauthorized processes."
+    "category": "Lateral Movement",
+    "mitre_attack": "T1021.006",
+    "recommendation": "Review PowerShell remoting sessions, verify administrative access, inspect executed commands, and investigate unauthorized remote activity."
   },
   {
-    "alert": "CMSTP UAC Bypass Detected",
-    "response": "CMSTP.exe was executed to bypass User Account Control (UAC) and launch a payload with elevated privileges through a trusted Windows binary.",
+    "alert": "WMI Remote Execution Detected",
+    "response": "Windows Management Instrumentation (WMI) was used to execute commands on a remote host, a common technique used for lateral movement.",
     "severity": "High",
-    "category": "Malware",
-    "mitre_attack": "T1218.003",
-    "recommendation": "Review CMSTP execution activity, inspect spawned processes, verify user actions, and investigate unauthorized privilege elevation attempts."
+    "category": "Lateral Movement",
+    "mitre_attack": "T1047",
+    "recommendation": "Review WMI execution activity, validate administrative access, inspect executed commands, and investigate the source system."
   },
   {
-    "alert": "PowerShell Process Injection Detected",
-    "response": "PowerShell injected a Portable Executable (PE) payload into a running process, potentially allowing malicious code to execute while evading security controls.",
+    "alert": "DCOM Remote Execution Detected",
+    "response": "Distributed Component Object Model (DCOM) was used to execute code on a remote system, potentially enabling stealthy lateral movement.",
     "severity": "High",
-    "category": "Malware",
-    "mitre_attack": "T1055",
-    "recommendation": "Investigate the source PowerShell process, identify the target process, analyze injected code artifacts, and terminate unauthorized processes."
+    "category": "Lateral Movement",
+    "mitre_attack": "T1021.003",
+    "recommendation": "Review DCOM activity, identify the originating account, inspect spawned processes, and investigate unauthorized remote execution."
   },
   {
-    "alert": "DLL Injection Detected",
-    "response": "A process used LoadLibrary and CreateRemoteThread techniques to inject a DLL into another process, enabling covert code execution.",
+    "alert": "Remote Scheduled Task Creation Detected",
+    "response": "A scheduled task was created to execute commands on a remote system, potentially facilitating lateral movement or remote code execution.",
     "severity": "High",
-    "category": "Malware",
-    "mitre_attack": "T1055.001",
-    "recommendation": "Review source and target processes, analyze the injected DLL, inspect memory artifacts, and isolate affected systems if malicious activity is confirmed."
+    "category": "Lateral Movement",
+    "mitre_attack": "T1053.005",
+    "recommendation": "Review the created task, inspect configured commands and triggers, verify administrative access, and investigate related remote activity."
   },
   {
-    "alert": "Mavinject Process Injection Detected",
-    "response": "Mavinject.exe was used to inject a DLL into a running Notepad process, a technique commonly used to hide malicious code execution within legitimate processes.",
+    "alert": "SMB Administrative Share File Transfer Detected",
+    "response": "A file was copied to a remote host using SMB administrative shares, potentially preparing a payload for remote execution and lateral movement.",
     "severity": "High",
-    "category": "Malware",
-    "mitre_attack": "T1055",
-    "recommendation": "Investigate the injected process, review the loaded DLL, inspect process memory, and identify the originating command or script."
+    "category": "Lateral Movement",
+    "mitre_attack": "T1570",
+    "recommendation": "Review SMB file transfer activity, validate administrative access, inspect transferred files, and investigate subsequent execution attempts."
   },
   {
-    "alert": "CreateRemoteThread Injection Detected",
-    "response": "A process used CreateRemoteThread to inject and execute code within another process, indicating possible malware execution or defense evasion activity.",
+    "alert": "Remote Service Creation Detected",
+    "response": "A Windows service was created on a remote system through the Service Control Manager, potentially enabling remote code execution and lateral movement.",
     "severity": "High",
-    "category": "Malware",
-    "mitre_attack": "T1055.001",
-    "recommendation": "Review source and target processes, analyze memory artifacts, inspect injected payloads, and investigate related malicious activity."
+    "category": "Lateral Movement",
+    "mitre_attack": "T1021.002",
+    "recommendation": "Review newly created services, inspect service binary paths, validate administrative access, and investigate remote execution activity."
   },
   {
-    "alert": "BITSAdmin Payload Download Detected",
-    "response": "BITSAdmin was used to download a PowerShell script from a remote location, potentially enabling covert payload delivery and execution.",
+    "alert": "WinRM Remote Management Activity Detected",
+    "response": "Windows Remote Management (WinRM) was used to execute commands or manage a remote system, potentially facilitating lateral movement.",
     "severity": "High",
-    "category": "Malware",
-    "mitre_attack": "T1197",
-    "recommendation": "Review the download source, inspect the retrieved file, investigate BITS job activity, and block unauthorized payload downloads."
-  },
-  {
-    "alert": "Event Log Tampering Detected",
-    "response": "Wevtutil.exe was used to modify the Security Event Log configuration, potentially disrupting logging and hindering forensic investigation.",
-    "severity": "High",
-    "category": "Malware",
-    "mitre_attack": "T1562.002",
-    "recommendation": "Review event log configuration changes, restore original settings, identify the initiating process, and investigate attempts to evade detection."
-  },
-  {
-    "alert": "WDigest Credential Protection Downgrade Detected",
-    "response": "Registry settings associated with WDigest authentication were modified, potentially enabling storage of plaintext credentials in memory.",
-    "severity": "High",
-    "category": "Malware",
-    "mitre_attack": "T1112",
-    "recommendation": "Review modified registry values, verify WDigest configuration, investigate the initiating account, and restore secure authentication settings."
-  },
-  {
-    "alert": "WMIC XSL Script Execution Detected",
-    "response": "WMIC executed a remote or local XSL file containing JScript code, potentially allowing malicious script execution through a trusted Windows utility.",
-    "severity": "High",
-    "category": "Malware",
-    "mitre_attack": "T1220",
-    "recommendation": "Investigate the referenced XSL file, review WMIC command-line activity, inspect executed scripts, and block unauthorized script execution."
-  },
-  {
-    "alert": "NetNTLM Downgrade Detected",
-    "response": "Authentication settings were modified to downgrade NetNTLM protections, potentially enabling credential interception or relay attacks against Windows systems.",
-    "severity": "High",
-    "category": "Malware",
-    "mitre_attack": "T1557",
-    "recommendation": "Review authentication policy changes, verify NTLM security settings, investigate the initiating account, and restore secure authentication configurations."
-  },
-  {
-    "alert": "Unauthorized User Account Creation Detected",
-    "response": "WMIC was used to create or modify a local user account, potentially establishing a backdoor account for persistent unauthorized access.",
-    "severity": "High",
-    "category": "Malware",
-    "mitre_attack": "T1136.001",
-    "recommendation": "Review newly created accounts, verify account legitimacy, inspect associated privileges, and remove unauthorized accounts."
-  },
-  {
-    "alert": "Remote Desktop Access Enabled",
-    "response": "System settings were modified to enable Remote Desktop services, potentially allowing remote access to the compromised host.",
-    "severity": "High",
-    "category": "Malware",
-    "mitre_attack": "T1021.001",
-    "recommendation": "Review RDP configuration changes, identify the initiating account, verify authorized remote access requirements, and disable unauthorized RDP access."
-  },
-  {
-    "alert": "Active Directory Security Descriptor Enumeration Detected",
-    "response": "PowerView performed LDAP queries to retrieve Active Directory security descriptors and permission assignments, potentially identifying opportunities for privilege abuse.",
-    "severity": "Medium",
-    "category": "Malware",
-    "mitre_attack": "T1484.001",
-    "recommendation": "Review LDAP query activity, investigate the originating account, audit directory permissions, and monitor for follow-on privilege escalation attempts."
+    "category": "Lateral Movement",
+    "mitre_attack": "T1021.006",
+    "recommendation": "Review WinRM sessions, verify administrative access, inspect executed commands, and investigate unauthorized remote management activity."
   },
   {
     "alert": "SharpWMI Remote Execution Detected",
